@@ -1,745 +1,372 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ARGUS VISION, tecnologia assistiva, cães-guia">
+    <meta name="description" content="Site institucional do ARGUS VISION, um sistema de tecnologia assistiva para tutores de cães-guia, oferecendo mais autonomia e segurança durante os passeios. Conheça nosso produto inovador e faça parte da nossa comunidade!">
+    <meta name="author" content="Time Argus">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
+   
   </head>
   <body>
-    <div class="landingpage">
-      <section class="header-wrapper">
-        <header class="header4">
-          <div class="header-child2"></div>
-          <div class="frame-parent19">
-            <img
-              class="frame-child38"
-              loading="lazy"
-              alt=""
-              src="./public/logo.png"
-            />
-
-            <div class="logo3">
-              <h1 class="argus-vision8">ARGUS VISION</h1>
-            </div>
-          </div>
-          <div class="navigation-items-wrapper">
-            <nav class="navigation-items">
-              <a href="#" class="incio6" id="incioText">Início</a>
-              <a href="./pages/Sobre.html" class="sobre6">Sobre</a>
-              <a href="./pages/Produto.html" class="produto6" id="produtoText">Produto</a>
-              <a href="./pages/Suporte.html" class="suporte6" id="suporteText">Suporte</a>
-            </nav>
-          </div>
-          <div class="profile-icon">
-            <div class="frame-parent20">
-              <a href="./pages/Login.html" class="personcircle-container">
-                <img
-                  class="personcircle-icon3"
-                  loading="lazy"
-                  alt=""
-                  src="./public/icons/PersonCircle.svg"
-                  id="personCircleIcon"
-                />
-              </a>
-              <div class="rectangle-parent21">
-                <button class="rectangle-button" id="rectangleButton"></button>
-                <a href="./pages/Cadastro.html" class="cadastre-se4">Cadastre-se</a>
-              </div>
-            </div>
-          </div>
-        </header>
-      </section>
-      <main class="landingpage-child">
-        <div class="vector-parent8">
-          <img
-            class="frame-child39"
-            loading="lazy"
-            alt=""
-            src="./public/pageHome/hero2.png"
-          />
-
-          <div class="vision-content">
-            <b class="argus-vision9">ARGUS VISION</b>
-            <p class="nosso-propsito">
-              Nosso propósito é trazer mais autonomia ao passear com seu cão
-              atravês de tecnologia assistiva.<br /><br />
-            </p>
-          </div>
-          <div class="frame-wrapper14">
-            <button class="rectangle-parent22">
-              <div class="frame-child40"></div>
-              <a href="./pages/Sobre.html" class="saiba-mais">Saiba Mais</a>
-            </button>
-          </div>
+   <header class="header">
+    <div class="container nav-container">
+      
+      <!-- Logo -->
+      <a href="#" class="logo-area" id="logoLink">
+        <div class="logo-img">
+          <img src="./public/logo.png" alt="Logo">
         </div>
-      </main>
-      <section class="landingpage-inner2">
-        <div class="frame-parent21">
-          <section class="frame-wrapper15">
-            <div class="frame-parent22">
-              <div class="frame-parent23">
-                <div class="frame-parent24">
-                  <img
-                    class="frame-child41"
-                    alt=""
-                    src="./public/pageHome/Group-195@2x.png"
-                  />
+        <span>ARGUS VISION</span>
+      </a>
 
-                </div>
-                <div class="veja-o-mundo-atravs-do-argus-parent">
-                  <h2 class="veja-o-mundo-container">
-                    <span>Veja o mundo<br />através do</span>
-                    <span class="argus-guide"> Argus Guide</span>
-                  </h2>
-                  <h2 class="veja-o-mundo-container2">
-                    <span>Veja o mundo<br />através do</span>
-                    <span class="argus-guide"> Argus Guide</span>
-                  </h2>
-                </div>
-              </div>
-              <div class="frame-parent25">
-                <div class="o-primeiro-dispositivo-intelig-parent">
-                  <p class="o-primeiro-dispositivo">
-                    O primeiro dispositivo inteligente projetado especificamente
-                    para cães-guia, fornecendo alertas de obstáculos por áudio e
-                    vibração traduzindo o ambiente urbano em alertas táteis e
-                    sonoros
-                  </p>
-                </div>
-                <div class="button-container-parent">
-                  <button class="button-container" id="buttonContainer">
-                    <a class="explorar-produto">Explorar Produto</a>
-                  </button>
-                  <div class="button-container2" id="buttonContainer">
-                    <b class="explorar-produto2">Explorar Produto</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="copilot-20260329-173206-4-parent">
-            <img
-              class="copilot-20260329-173206-4-icon"
-              alt=""
-              src="./public/pageHome/argusGuide.png"
-            />
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" id="navInicio">Início</a></li>
+          <li><a href="#" id="navSobre">Sobre</a></li>
+          <li><a href="#" id="navProduto">Produto</a></li>
+          <li><a href="#" id="navSuporte">Suporte</a></li>
+          <li class="mobile-only-btn" style="display: none;"><button class="btn btn-blue" style="width: 100%">Cadastre-se</button></li>
+        </ul>
+      </nav>
 
-          </div>
+      <!-- Ações (Perfil e Botão) -->
+      <div class="user-actions">
+        <div class="icon-profile" id="btnProfile">
+          <svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
         </div>
-      </section>
-      <section class="mais-autonomia-ao-passear-com-wrapper">
-        <h1 class="mais-autonomia-ao-container">
-          <span>Mais </span>
-          <span class="argus-guide">autonomia</span>
-          <span> ao passear com seu cão-guia</span>
-        </h1>
-      </section>
-      <div class="landingpage-item"></div>
-      <div class="landingpage-child2"></div>
-      <section class="landingpage-inner3">
-        <div class="frame-parent26">
-          <div class="rectangle-parent23">
-            <div class="frame-child43"></div>
-            <div class="frame-wrapper16">
-              <div class="frame-parent27">
-                <div class="frame-parent28">
-                  <div class="eyefill-wrapper">
-                    <img
-                      class="eyefill-icon2"
-                      alt=""
-                      src="./public/EyeFill.svg"
-                    />
-                  </div>
-                  <h3 class="rastreamento-em-tempo">
-                    Rastreamento em Tempo Real
-                  </h3>
-                </div>
-                <div class="o-dispositivo-informa">
-                  O dispositivo informa a distância e direção do cão em metros,
-                  garantindo que o tutor saiba sempre onde ele está.
-                </div>
-              </div>
-            </div>
-            <div class="feature-separator">
-              <img
-                class="column-divider-icon"
-                loading="lazy"
-                alt=""
-                src="./public/Rectangle-14@2x.png"
-              />
-
-              <div class="column-divider"></div>
-            </div>
-          </div>
-          <div class="rectangle-parent24">
-            <div class="frame-child44"></div>
-            <div class="frame-parent29">
-              <div class="feedback-sonoro-e-ttil-wrapper">
-                <h2 class="feedback-sonoro-e">Feedback Sonoro e Tátil</h2>
-              </div>
-              <img
-                class="user-voice-fill-icon"
-                alt=""
-                src="./public/user-voice-fill.svg"
-              />
-            </div>
-            <div class="alertas-sonoros-simples">
-              Alertas sonoros simples e vibrações discretas ajudam o tutor a
-              localizar o cão sem sobrecarregar sua percepção.
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="landingpage-inner4">
-        <div class="frame-parent30">
-          <div class="rectangle-parent25">
-            <div class="frame-child45"></div>
-            <div class="smartphone-separator">
-              <img
-                class="vertical-divider-icon"
-                alt=""
-                src="./public/Rectangle-141@2x.png"
-              />
-
-              <div class="vertical-divider"></div>
-            </div>
-            <div class="frame-wrapper17">
-              <div class="frame-parent31">
-                <div class="frame-parent32">
-                  <div class="controle-via-smartphone-wrapper">
-                    <h2 class="controle-via-smartphone">
-                      Controle via Smartphone
-                    </h2>
-                  </div>
-                  <img
-                    class="smartphone-fill-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./public/smartphone-fill.svg"
-                  />
-                </div>
-                <div class="pelo-aplicativo-argus">
-                  Pelo aplicativo ARGUS Vision, o tutor pode ajustar
-                  preferências e receber notificações acessíveis em tempo real.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-parent26">
-            <div class="frame-child46"></div>
-            <div class="frame-parent33">
-              <div class="resposta-rpida-wrapper">
-                <h2 class="resposta-rpida">Resposta Rápida</h2>
-              </div>
-              <img
-                class="flashlight-fill-icon"
-                loading="lazy"
-                alt=""
-                src="./public/flashlight-fill.svg"
-              />
-            </div>
-            <div class="as-informaes-chegam-instanta-wrapper">
-              <div class="as-informaes-chegam">
-                As informações chegam instantaneamente, reduzindo a ansiedade e
-                aumentando a sensação de segurança.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="smartphone-data-wrapper">
-        <div class="smartphone-data">
-          <div class="copilot-20260412-154932-photor-wrapper">
-            <img
-              class="copilot-20260412-154932-photor-icon"
-              loading="lazy"
-              alt=""
-              src="./public/Copilot-20260412-154932-Photoroom-1@2x.png"
-            />
-          </div>
-          <section class="elion-description">
-            <h2 class="conhea-o-elion-container">
-              <span>Conheça o </span>
-              <span class="elion">Elion</span>
-            </h2>
-            <div class="o-seu-co-guia">
-              O seu cão-guia digital. Desenvolvido para tornar sua experiência
-              mais simples, intuitiva e envolvente. Ele vai te auxiliar na
-              resolução de dúvidas, compartilha dicas de uso e cuidados de forma
-              clara e acessível, além de apresentar recursos e orientar sobre
-              funcionalidades. Com isso, garante uma interação prática, fluida e
-              inclusiva.
-            </div>
-            <button class="elion-button">
-              <b class="falar-com-elion">Falar com Elion</b>
-            </button>
-          </section>
-        </div>
-      </section>
-      <img class="landingpage-child3" alt="" src="./public/Group-1691.svg" />
-
-      <div class="nossa-comunidade-wrapper">
-        <h2 class="nossa-comunidade">Nossa Comunidade</h2>
+        <button class="btn btn-blue" id="btnCadastro">Cadastre-se</button>
       </div>
-      <div class="experimente-o-argus-guide-e-co-wrapper">
-        <h3 class="experimente-o-argus">
-          Experimente o ARGUS Guide e compartilhe da mesma emoção
-        </h3>
-      </div>
-      <div class="landingpage-inner5">
-        <div class="h-wrapper" id="groupContainer">
-          <div class="h">h</div>
-        </div>
-      </div>
-      <section class="elion-product-wrapper">
-        <div class="elion-product">
-          <div class="rectangle-parent27">
-            <div class="frame-child47"></div>
-            <div class="o-argus-oferece-ao-tutor-maior-wrapper">
-              <div class="o-argus-oferece">
-                “O ARGUS oferece ao tutor maior independência, permitindo
-                acompanhar e monitorar seu cão-guia sem precisar de auxílio
-                constante de terceiros.”
-              </div>
-            </div>
-            <div class="review-stars">
-              <img
-                class="review-stars-child"
-                loading="lazy"
-                alt=""
-                src="./public/Ellipse-7@2x.png"
-              />
 
-              <div class="review-user">
-                <div class="jose-g-parent">
-                  <div class="jose-g">Jose G.</div>
-                  <div class="star-ratings">
-                    <div class="div2">10/10⭐</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="navigation-button">
-              <img
-                class="arrowleftcirclefill-icon2"
-                alt=""
-                src="./public/ArrowLeftCircleFill.svg"
-              />
+      <!-- Menu Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
 
-              <img
-                class="arrowleftcirclefill-icon2"
-                alt=""
-                src="./public/ArrowRightCircleFill.svg"
-              />
-            </div>
-          </div>
-          <div class="rectangle-parent28">
-            <div class="frame-child48"></div>
-            <div class="o-argus-oferece-ao-tutor-maior-wrapper">
-              <div class="o-argus-oferece">
-                “O ARGUS oferece ao tutor maior independência, permitindo
-                acompanhar e monitorar seu cão-guia sem precisar de auxílio
-                constante de terceiros.”
-              </div>
-            </div>
-            <div class="review-stars">
-              <img
-                class="review-stars-child"
-                alt=""
-                src="./public/Ellipse-7@2x.png"
-              />
-
-              <div class="review-user">
-                <div class="jose-g-parent">
-                  <div class="jose-g">Jose G.</div>
-                  <div class="star-ratings">
-                    <div class="div2">10/10⭐</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-parent28">
-            <div class="frame-child48"></div>
-            <div class="o-argus-oferece-ao-tutor-maior-wrapper">
-              <div class="o-argus-oferece">
-                “O ARGUS oferece ao tutor maior independência, permitindo
-                acompanhar e monitorar seu cão-guia sem precisar de auxílio
-                constante de terceiros.”
-              </div>
-            </div>
-            <div class="review-stars">
-              <img
-                class="review-stars-child"
-                alt=""
-                src="./public/Ellipse-7@2x.png"
-              />
-
-              <div class="review-user">
-                <div class="jose-g-parent">
-                  <div class="jose-g">Jose G.</div>
-                  <div class="star-ratings">
-                    <div class="div2">10/10⭐</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-parent28">
-            <div class="frame-child48"></div>
-            <div class="o-argus-oferece-ao-tutor-maior-wrapper">
-              <div class="o-argus-oferece">
-                “O ARGUS oferece ao tutor maior independência, permitindo
-                acompanhar e monitorar seu cão-guia sem precisar de auxílio
-                constante de terceiros.”
-              </div>
-            </div>
-            <div class="review-stars">
-              <img
-                class="review-stars-child"
-                alt=""
-                src="./public/Ellipse-7@2x.png"
-              />
-
-              <div class="review-user">
-                <div class="jose-g-parent">
-                  <div class="jose-g">Jose G.</div>
-                  <div class="star-ratings">
-                    <div class="div2">10/10⭐</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-parent28">
-            <div class="frame-child48"></div>
-            <div class="o-argus-oferece-ao-tutor-maior-wrapper">
-              <div class="o-argus-oferece">
-                “O ARGUS oferece ao tutor maior independência, permitindo
-                acompanhar e monitorar seu cão-guia sem precisar de auxílio
-                constante de terceiros.”
-              </div>
-            </div>
-            <div class="review-stars">
-              <img
-                class="review-stars-child"
-                alt=""
-                src="./public/Ellipse-7@2x.png"
-              />
-
-              <div class="review-user">
-                <div class="jose-g-parent">
-                  <div class="jose-g">Jose G.</div>
-                  <div class="star-ratings">
-                    <div class="div2">10/10⭐</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="sponsor-images">
-        <section class="frame-parent34">
-          <div class="rectangle-parent32">
-            <div class="frame-child55"></div>
-            <img
-              class="image-3-icon"
-              loading="lazy"
-              alt=""
-              src="./public/image-3@2x.png"
-            />
-          </div>
-          <div class="rectangle-parent33">
-            <div class="frame-child56"></div>
-            <img
-              class="image-4-icon"
-              loading="lazy"
-              alt=""
-              src="./public/image-4@2x.png"
-            />
-          </div>
-        </section>
-        <div class="nossos-apoiadores-wrapper">
-          <h2 class="nossos-apoiadores">Nossos Apoiadores</h2>
-        </div>
-      </section>
-      <section class="landingpage-inner6">
-        <div class="frame-child57"></div>
-      </section>
-      <section class="landingpage-inner7">
-        <div class="rectangle-parent34">
-          <div class="frame-child58"></div>
-          <div class="baixe-o-aplicativo-parent">
-            <b class="baixe-o-aplicativo2">Baixe o Aplicativo</b>
-            <div class="disponvel-para-android2">
-              Disponível para Android e iOS
-            </div>
-            <div class="acesse-a-loja2">
-              Acesse a loja de aplicativos do seu celular e procure por ARGUS
-              Mobilidade. Instale gratuitamente e comece a explorar uma nova
-              forma de caminhar com autonomia.
-            </div>
-            <div class="rectangle-parent35">
-              <div class="frame-child59"></div>
-              <img
-                class="image-10-icon2"
-                alt=""
-                src="./public/image-101@2x.png"
-              />
-
-              <b class="app-store2">APP STORE</b>
-            </div>
-            <div class="rectangle-parent35">
-              <div class="frame-child59"></div>
-              <img
-                class="image-11-icon2"
-                alt=""
-                src="./public/image-11@2x.png"
-              />
-
-              <b class="play-store2">PLAY STORE</b>
-            </div>
-            <div class="copilot-20260410-204303-1-ph-group">
-              <img
-                class="copilot-20260410-204303-1-ph-icon2"
-                alt=""
-                src="./public/Copilot-20260410-204303-1-Photoroom-1@2x.png"
-              />
-
-              <img class="logo-icon3" alt="" src="./public/logo@2x.png" />
-            </div>
-            <div class="frame-child61"></div>
-            <section class="app-description-wrapper">
-              <div class="app-description">
-                <div class="app-link">
-                  <h2 class="baixe-o-aplicativo3">Baixe o Aplicativo</h2>
-                  <h2 class="disponvel-para-android3">
-                    Disponível para Android e iOS
-                  </h2>
-                  <div class="acesse-a-loja3">
-                    Acesse a loja de aplicativos do seu celular e procure por
-                    ARGUS Mobilidade. Instale gratuitamente e comece a explorar
-                    uma nova forma de caminhar com autonomia.
-                  </div>
-                </div>
-                <div class="store-badges">
-                  <div class="app-badges">
-                    <button class="rectangle-parent37">
-                      <div class="frame-child62"></div>
-                      <img
-                        class="image-10-icon3"
-                        alt=""
-                        src="./public/image-10@2x.png"
-                      />
-
-                      <div class="play-store-container">
-                        <b class="app-store3">APP STORE</b>
-                      </div>
-                    </button>
-                    <button class="rectangle-parent38">
-                      <div class="frame-child62"></div>
-                      <img
-                        class="image-11-icon3"
-                        alt=""
-                        src="./public/image-11@2x.png"
-                      />
-
-                      <div class="play-store-container">
-                        <b class="play-store3">PLAY STORE</b>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="copilot-20260410-204303-1-ph-container">
-              <img
-                class="copilot-20260410-204303-1-ph-icon3"
-                alt=""
-                src="./public/Copilot-20260410-204303-1-Photoroom-1@2x.png"
-              />
-
-              <img class="logo-icon4" alt="" src="./public/logo@2x.png" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="footer4">
-        <div class="footer-child2"></div>
-        <section class="footer-inner2">
-          <div class="frame-parent35">
-            <div class="frame-parent36">
-              <div class="logo-column-parent">
-                <div class="logo-column">
-                  <div class="sitemap-column">
-                    <img
-                      class="untitled-project-1-photoroom4"
-                      loading="lazy"
-                      alt=""
-                      src="./public/Untitled-Project-1-Photoroom-1@2x.png"
-                    />
-
-                    <div class="logo-argus">
-                      <h3 class="argus-vision10">ARGUS VISION</h3>
-                    </div>
-                  </div>
-                  <div class="tecnologia-assistiva-para4">
-                    Tecnologia Assistiva para tutores de Cães-Guia: Trazendo
-                    mais autonomia ao passear com seu cão
-                  </div>
-                </div>
-                <h3 class="nos-siga4">Nos siga</h3>
-              </div>
-              <div class="nav-columns-wrapper">
-                <div class="nav-columns">
-                  <div class="institucional-group">
-                    <h3 class="institucional4">Institucional</h3>
-                    <div class="page-links">
-                      <div class="incio7">Início</div>
-                      <div class="sobre7" id="sobreText1">Sobre</div>
-                      <div class="sobre7" id="produtoText1">Produto</div>
-                    </div>
-                  </div>
-                  <div class="suporte-container" id="groupContainer">
-                    <h3 class="suporte7">Suporte</h3>
-                    <div class="help-links-wrapper">
-                      <div class="help-links">
-                        <div class="incio7">Fale conosco</div>
-                        <div class="incio7">Dúvidas Frequentes(FAQ)</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details-column">
-                    <h3 class="legal4">Legal</h3>
-                    <div class="terms-links">
-                      <div class="incio7">Politica de Privacidade</div>
-                      <div class="incio7">Termos e condições</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="social-icons4">
-              <img
-                class="social-icons5"
-                alt=""
-                src="./public/Social-Icons.svg"
-              />
-
-              <img
-                class="social-icons6"
-                alt=""
-                src="./public/Social-Icons1.svg"
-              />
-
-              <img
-                class="social-icons5"
-                alt=""
-                src="./public/Social-Icons2.svg"
-              />
-            </div>
-          </div>
-        </section>
-        <footer class="copyright-bar">
-          <div class="line-parent2">
-            <div class="frame-child64"></div>
-            <div class="frame-child65"></div>
-          </div>
-          <div class="argus-todos-os-direitos-rese-container">
-            <div class="argus-todos4">
-              © 2026 ARGUS - Todos os Direitos Reservados | Termos e Condições |
-              Política de Privacidade
-            </div>
-          </div>
-        </footer>
-      </section>
     </div>
+  </header>
 
-    <script>
-      var incioText = document.getElementById("incioText");
-      if (incioText) {
-        incioText.addEventListener("click", function (e) {
-          window.location.href = "/";
-        });
-      }
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <img src="public/pageHome/hero.png" alt="Cão-Guia e Tutor" class="hero-image"/>
+        <h1>ARGUS VISION</h1>
+        <p>Nosso propósito é trazer mais autonomia ao passear com seu cão através de tecnologia assistiva.</p>
+        <button class="btn btn-orange" id="btnSaibaMais">Saiba Mais</button>
+      </div>
+    </section>
+
+    <!-- Argus Guide Section -->
+    <section class="argus-guide container">
+      <div class="guide-wrapper">
+        <div class="guide-text">
+          <span class="badge">O futuro da mobilidade</span>
+          <h2>Veja o mundo<br>através do <span>Argus Guide</span></h2>
+          <p>O primeiro dispositivo inteligente projetado especificamente para cães-guia, fornecendo alertas de obstáculos por áudio e vibração traduzindo o ambiente urbano em alertas táteis e sonoros.</p>
+          <button class="btn btn-blue" id="btnExplorar">Explorar Produto</button>
+        </div>
+        <div class="guide-image">
+          <img src="public/pageHome/argusGuide.png" alt="Argus Guide">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container">
+      <h2 class="features-header">Mais <span>autonomia</span> ao passear<br>com seu cão-guia</h2>
       
-      var produtoText = document.getElementById("produtoText");
-      if (produtoText) {
-        produtoText.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card bg-yellow">
+          <svg width="32" height="32" fill="var(--secondary-blue)" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <h3>Rastreamento em Tempo Real</h3>
+          <p>O dispositivo informa a distância e direção do cão em metros, garantindo que o tutor saiba sempre onde ele está.</p>
+          <img src="public/pageHome/Rectangle-14@2x.png" alt="Rastreamento em Tempo Real">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card bg-darkblue">
+          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <h3>Feedback Sonoro e Tátil</h3>
+          <p>Alertas sonoros simples e vibrações discretas ajudam o tutor a localizar o cão sem sobrecarregar sua percepção.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card bg-orange">
+          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          <h3>Controle via Smartphone</h3>
+          <p>Pelo aplicativo ARGUS Vision, o tutor pode ajustar preferências e receber notificações acessíveis em tempo real.</p>
+          <img src="public/pageHome/Rectangle-141@2x.png" alt="Controle via Smartphone">
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card bg-lightblue">
+          <svg width="32" height="32" fill="var(--primary-yellow)" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          <h3>Resposta Rápida</h3>
+          <p>As informações chegam instantaneamente, reduzindo a ansiedade e aumentando a sensação de segurança.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elion Section -->
+    <section class="elion-section">
+      <div class="container elion-wrapper">
+        <div class="elion-image">
+          <img src="public/pageHome/elion.png" alt="Elion"/>
+        </div>
+        <div class="elion-text">
+          <h2>Conheça o <span>Elion</span></h2>
+          <p>O seu cão-guia digital. Desenvolvido para tornar sua experiência mais simples, intuitiva e envolvente. Ele vai te auxiliar na resolução de dúvidas, compartilha dicas de uso e cuidados de forma clara e acessível, além de apresentar recursos e orientar sobre funcionalidades. Com isso, garante uma interação prática, fluida e inclusiva.</p>
+          <button class="btn btn-yellow" id="btnElion">Falar com Elion</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community container">
+      <h2>Nossa Comunidade</h2>
+      <p>Experimente o ARGUS Guide e compartilhe da mesma emoção</p>
       
-      var suporteText = document.getElementById("suporteText");
-      if (suporteText) {
-        suporteText.addEventListener("click", function (e) {
-          window.location.href = "./Suport.html";
-        });
+      <!-- ALTERADO: Wrapper do carrossel introduzido aqui com botões -->
+      <div class="carousel-wrapper">
+        
+        <!-- Botão Esquerda -->
+        <button class="carousel-btn prev" id="carouselPrev">&#10094;</button>
+
+        <div class="testimonials" id="carouselTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p>"O ARGUS oferece ao tutor maior independência, permitindo acompanhar e monitorar seu cão-guia sem precisar de auxílio constante de terceiros."</p>
+            <div class="testimonial-user">
+              <div class="user-avatar"></div>
+              <div class="user-info">
+                <strong>Jose G.</strong>
+                <span>10/10 ⭐</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p>"Me sinto muito mais seguro para andar em vias movimentadas. O retorno tátil e sonoro é super discreto, ninguém percebe que estou utilizando!"</p>
+            <div class="testimonial-user">
+              <div class="user-avatar"></div>
+              <div class="user-info">
+                <strong>Maria F.</strong>
+                <span>10/10 ⭐</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p>"O rastreamento em tempo real do meu cão me trouxe uma tranquilidade inexplicável. A tecnologia é maravilhosa e o suporte da Argus é muito atencioso."</p>
+            <div class="testimonial-user">
+              <div class="user-avatar"></div>
+              <div class="user-info">
+                <strong>Carlos A.</strong>
+                <span>10/10 ⭐</span>
+              </div>
+            </div>
+          </div>
+          <!-- ALTERADO: Adicionado cards extras para que o efeito de rolar funcione com bastante folga -->
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <p>"A autonomia é o que eu mais buscava. A bateria dura bastante e a sincronização com o smartphone não possui latência. Recomendo para todos."</p>
+            <div class="testimonial-user">
+              <div class="user-avatar"></div>
+              <div class="user-info">
+                <strong>Fernanda S.</strong>
+                <span>10/10 ⭐</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <p>"O Elion me ajudou nas configurações iniciais! Muito didático e com recursos avançados para tutores de primeira viagem. Fenomenal."</p>
+            <div class="testimonial-user">
+              <div class="user-avatar"></div>
+              <div class="user-info">
+                <strong>Roberto L.</strong>
+                <span>10/10 ⭐</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão Direita -->
+        <button class="carousel-btn next" id="carouselNext">&#10095;</button>
+
+      </div>
+    </section>
+
+
+    <!-- Sponsors Section -->
+    <section class="sponsors container">
+      <h2>Nossos Apoiadores</h2>
+      <div class="sponsors-logos">
+        <div class="sponsor-logo" id="logoSenac">
+          <img src="public/pageHome/logoSenac.png" alt="Logo SENAC">
+        </div>
+        <div class="sponsor-logo" id="logoProa" style="background-color: var(--secondary-blue); color: white;">
+          <img src="public/pageHome/logoProa.png" alt="Logo PROA">
+        </div>
+      </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="download-app">
+      <div class="download-wrapper">
+        <div class="download-text">
+          <h2>Baixe o Aplicativo</h2>
+          <h3>Disponível para Android e iOS</h3>
+          <p>Acesse a loja de aplicativos do seu celular e procure por ARGUS Mobilidade. Instale gratuitamente e comece a explorar uma nova forma de caminhar com autonomia.</p>
+          
+          <div class="store-buttons">
+            <button class="btn btn-dark">
+              <p><img src="public/logoPlayStore.png" alt="Google Play"> Google Play</p>
+            </button>
+            <button class="btn btn-dark">
+              <p><img src="public/logoAppStore.png" alt="App Store"> App Store</p>
+            </button>
+          </div>
+        </div>
+        
+        <div class="app-mockup">
+          <img src="./public/app-mockup.png" alt="App Mockup"/>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+   <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                  <a href="#" class="logo-area-footer" id="logoLink">
+                    <div class="logo-img">
+                      <img src="./public/logoFooter.png" alt="Logo">
+                    </div>
+                    <span>ARGUS VISION</span>
+                  </a>
+                    <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
+                    <div class="social-icons">
+                        <div class="social-icon"><img src="public/icons/Vector7.svg" alt="Instagram"></div>
+                        <div class="social-icon"><img src="public/icons/Vector8.svg" alt="GitHub"></div>
+                        <div class="social-icon"><img src="public/icons/Vector9.svg" alt="Facebook"></div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li>Início</li>
+                        <li>Sobre</li>
+                        <li>Produto</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li>Fale conosco</li>
+                        <li>Dúvidas Frequentes (FAQ)</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Política de Privacidade</li>
+                        <li>Termos e condições</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 ARGUS - Todos os Direitos Reservados | Termos e Condições | Política de Privacidade
+            </div>
+        </div>
+    </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Configuração do Menu Mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const mobileOnlyBtn = document.querySelector(".mobile-only-btn");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        
+        // Altera o ícone baseado no estado do menu
+        if(navLinks.classList.contains("active")) {
+          menuToggle.innerText = "✕"; // Fechar
+          if (window.innerWidth <= 600) mobileOnlyBtn.style.display = "block";
+        } else {
+          menuToggle.innerText = "☰"; // Hamburger
+          mobileOnlyBtn.style.display = "none";
+        }
+      });
+    }
+
+    // Ocultar menu ao redimensionar tela de volta para Desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        navLinks.classList.remove("active");
+        menuToggle.innerText = "☰";
+        if(mobileOnlyBtn) mobileOnlyBtn.style.display = "none";
       }
-      
-      var personCircleIcon = document.getElementById("personCircleIcon");
-      if (personCircleIcon) {
-        personCircleIcon.addEventListener("click", function (e) {
-          window.location.href = "./Component.html";
-        });
+    });
+
+    // Navegação simples adaptada para os IDs limpos
+    const safeAddListener = (id, callback) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.addEventListener("click", callback);
       }
-      
-      var rectangleButton = document.getElementById("rectangleButton");
-      if (rectangleButton) {
-        rectangleButton.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var groupContainer = document.getElementById("groupContainer");
-      if (groupContainer) {
-        groupContainer.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var sobreText1 = document.getElementById("sobreText1");
-      if (sobreText1) {
-        sobreText1.addEventListener("click", function (e) {
-          window.location.href = "./About.html";
-        });
-      }
-      
-      var produtoText1 = document.getElementById("produtoText1");
-      if (produtoText1) {
-        produtoText1.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var groupContainer = document.getElementById("groupContainer");
-      if (groupContainer) {
-        groupContainer.addEventListener("click", function (e) {
-          window.location.href = "./Suport.html";
-        });
-      }
-      </script>
-  </body>
+    };
+
+    safeAddListener("logoLink", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navInicio", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navSobre", (e) => { e.preventDefault(); window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("navProduto", (e) => { e.preventDefault(); /* Adicione rota do produto */ });
+    safeAddListener("navSuporte", (e) => { e.preventDefault(); window.location.href = "./pages/Suporte.html"; });
+    safeAddListener("btnProfile", () => { window.location.href = "./pages/Login.html"; });
+    safeAddListener("btnCadastro", () => { window.location.href = "./pages/Cadastro.html"; });
+    safeAddListener("btnSaibaMais", () => { window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("btnExplorar", () => { /* Rota de explorar produto */ });
+    safeAddListener("btnElion", () => { /* Rota do Elion */ });
+
+    // ==========================================
+    // ALTERADO: Lógica do Carrossel de Feedbacks
+    // ==========================================
+    const track = document.getElementById("carouselTrack");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+
+    if(track && prevBtn && nextBtn) {
+      // Ao clicar em 'Anterior'
+      prevBtn.addEventListener("click", () => {
+        // Pega a largura exata do primeiro cartão visível para saber quanto deslizar
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Subtrai a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: -(cardWidth + 20), behavior: 'smooth' });
+      });
+
+      // Ao clicar em 'Próximo'
+      nextBtn.addEventListener("click", () => {
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Adiciona a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: (cardWidth + 20), behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
 </html>
