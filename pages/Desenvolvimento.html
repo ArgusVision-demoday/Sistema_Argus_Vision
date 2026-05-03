@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/EmDesenvolvimento.css">
+    <title>Em Desenvolvimento - Argus Vision</title>
+</head>
+<body>
+    <!-- HEADER (Idêntico ao das outras páginas) -->
+    <header class="header">
+    <div class="container nav-container">
+      
+      <!-- Logo -->
+      <a href="#" class="logo-area" id="logoLink">
+        <div class="logo-img">
+          <img src="../public/logo.png" alt="Logo">
+        </div>
+        <span>ARGUS VISION</span>
+      </a>
+
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" id="navInicio">Início</a></li>
+          <li><a href="#" id="navSobre">Sobre</a></li>
+          <li><a href="#" id="navProduto">Produto</a></li>
+          <li><a href="#" id="navSuporte">Suporte</a></li>
+          <li class="mobile-only-btn" style="display: none;">
+            <button class="btn btn-blue" style="width: 100%"><a href="./Cadastro.html">Cadastre-se</a></button></li>
+        </ul>
+      </nav>
+
+      <!-- Ações (Perfil e Botão) -->
+      <div class="user-actions">
+        <div class="icon-profile" id="btnProfile">
+          <a href="./Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
+        </div>
+        <button class="btn btn-blue" id="btnCadastro"><a href="./Cadastro.html">Cadastre-se</a></button>
+      </div>
+
+      <!-- Menu Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+    </div>
+  </header>
+
+    <!-- CONTEÚDO PRINCIPAL (EM DESENVOLVIMENTO) -->
+    <main class="construction-container">
+        <div class="construction-content">
+            <!-- Aqui usamos o mascote Elion para dar personalidade -->
+            <img src="../public/pageEmDesenvolvimento/elion.png" alt="Mascote Elion trabalhando" class="construction-elion">
+            <h1>Estamos preparando algo <span>incrível!</span></h1>
+            <p>Nossa equipe está trabalhando duro para finalizar esta página. Em breve, você terá acesso a mais funcionalidades da <strong>Argus Vision</strong>.</p>
+            
+            <div class="status-box">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span>Progresso: 85%</span>
+            </div>
+
+            <a href="../index.html" class="btn btn-orange">Voltar para o Início</a>
+        </div>
+    </main>
+
+    <!-- FOOTER (Idêntico ao das outras páginas) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo-area-footer">
+                        <div class="logo-img">
+                            <img src="../public/logoFooter.png" alt="Logo">
+                        </div>
+                        <span>ARGUS VISION</span>
+                    </a>
+                    <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
+                    <div class="social-icons">
+                        <div class="social-icon"><img src="../public/icons/Vector7.svg" alt="Instagram"></div>
+                        <div class="social-icon"><img src="../public/icons/Vector8.svg" alt="GitHub"></div>
+                        <div class="social-icon"><img src="../public/icons/Vector9.svg" alt="Facebook"></div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li>Início</li>
+                        <li>Sobre</li>
+                        <li>Produto</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li>Fale conosco</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Política de Privacidade</li>
+                        <li>Termos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026  ARGUS VISION - Todos os Direitos Reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Configuração do Menu Mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const mobileOnlyBtn = document.querySelector(".mobile-only-btn");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        
+        // Altera o ícone baseado no estado do menu
+        if(navLinks.classList.contains("active")) {
+          menuToggle.innerText = "✕"; // Fechar
+          if (window.innerWidth <= 600) mobileOnlyBtn.style.display = "block";
+        } else {
+          menuToggle.innerText = "☰"; // Hamburger
+          mobileOnlyBtn.style.display = "none";
+        }
+      });
+    }
+
+    // Ocultar menu ao redimensionar tela de volta para Desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        navLinks.classList.remove("active");
+        menuToggle.innerText = "☰";
+        if(mobileOnlyBtn) mobileOnlyBtn.style.display = "none";
+      }
+    });
+
+    // Navegação simples adaptada para os IDs limpos
+    const safeAddListener = (id, callback) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.addEventListener("click", callback);
+      }
+    };
+
+    safeAddListener("logoLink", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navInicio", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navSobre", (e) => { e.preventDefault(); window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("navProduto", (e) => { e.preventDefault(); /* Adicione rota do produto */ });
+    safeAddListener("navSuporte", (e) => { e.preventDefault(); window.location.href = "./pages/Suporte.html"; });
+    safeAddListener("btnProfile", () => { window.location.href = "./pages/Login.html"; });
+    safeAddListener("btnCadastro", () => { window.location.href = "./pages/Cadastro.html"; });
+    safeAddListener("btnSaibaMais", () => { window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("btnExplorar", () => { /* Rota de explorar produto */ });
+    safeAddListener("btnElion", () => { /* Rota do Elion */ });
+
+    // ==========================================
+    // ALTERADO: Lógica do Carrossel de Feedbacks
+    // ==========================================
+    const track = document.getElementById("carouselTrack");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+
+    if(track && prevBtn && nextBtn) {
+      // Ao clicar em 'Anterior'
+      prevBtn.addEventListener("click", () => {
+        // Pega a largura exata do primeiro cartão visível para saber quanto deslizar
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Subtrai a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: -(cardWidth + 20), behavior: 'smooth' });
+      });
+
+      // Ao clicar em 'Próximo'
+      nextBtn.addEventListener("click", () => {
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Adiciona a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: (cardWidth + 20), behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>

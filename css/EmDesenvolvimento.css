@@ -1,0 +1,83 @@
+/* Importando variáveis se necessário */
+
+
+/* === ESTILO DA PÁGINA EM CONSTRUÇÃO === */
+.construction-container {
+    min-height: 70vh; /* Ocupa a maior parte da tela entre header e footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.construction-content {
+    max-width: 600px;
+}
+
+.construction-elion {
+    max-width: 200px;
+    margin-bottom: 20px;
+
+}
+
+.construction-content h1 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.construction-content h1 span {
+    color: var(--primary-orange);
+}
+
+.construction-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* === BARRA DE PROGRESSO === */
+.status-box {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    width: 85%; /* Simula o progresso */
+    height: 100%;
+    background: #facc15;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.status-box span {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+/* Reutilizando estilos de botões que você já tem */
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e05900;
+    transform: scale(1.05);
+}

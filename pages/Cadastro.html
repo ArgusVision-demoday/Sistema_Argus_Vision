@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global2.css" />
-    <link rel="stylesheet" href="./Cadastro.css" />
+    <link rel="stylesheet" href="../css/global2.css" />
+    <link rel="stylesheet" href="../css/Cadastro.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap"
@@ -16,224 +16,95 @@
     />
   </head>
   <body>
-    <div class="desktop-6">
-      <main class="sign-up">
-        <div class="sign-up-inner">
-          <div class="line-parent">
-            <div class="frame-child"></div>
-            <div class="frame-child"></div>
-          </div>
-        </div>
-        <main class="rectangle-parent">
-          <div class="frame-inner"></div>
-          <section class="frame-wrapper">
-            <form class="frame-parent">
-              <div class="frame-group">
-                <div class="voltar-wrapper">
-                  <div class="voltar">
-                    <span class="span">←</span>
-                    <span class="span2"> </span>
-                    <span class="voltar2">Voltar</span>
-                  </div>
-                </div>
-                <div class="frame-container">
-                  <div class="frame-div">
-                    <div class="frame-wrapper2">
-                      <div class="frame-parent2">
-                        <div class="crie-sua-conta-argus-wrapper">
-                          <div class="crie-sua-conta">Crie sua conta Argus</div>
-                        </div>
-                        <h1 class="cadastro">Cadastro</h1>
-                      </div>
-                    </div>
-                    <div class="cadastrar-se-com">Cadastrar-se com</div>
-                  </div>
-                  <div class="checkbox-container-wrapper">
-                    <div class="frame-parent3">
-                      <button class="social-container-wrapper" type="submit">
-                        <div class="social-container">
-                          <img class="image-2-icon" alt="" />
+    <div class="login-container">
+    <section class="login-form-area">
+        <div class="form-wrapper">
+            <a href="../index.html" class="btn-back">← Voltar</a>
+            
+            <p class="welcome-text">Crie sua conta Argus</p>
+            <h1 class="login-title">Cadastro</h1>
 
-                          <div class="google">Google</div>
-                        </div>
-                      </button>
-                      <button class="frame-button" type="submit">
-                        <div class="facebook-parent">
-                          <div class="facebook">Facebook</div>
-                          <img class="facebook-icon" alt="" />
-                        </div>
-                      </button>
-                      <button class="text-wrapper" type="submit">
-                        <div class="text">Apple</div>
-                      </button>
-                    </div>
-                  </div>
+            <div class="social-login">
+                <div class="social-buttons">
+                    <button class="btn-social"><img src="../public/icons/googleIcon.png" alt="Google"> Google</button>
+                    <button class="btn-social"><img src="../public/icons/facebookIcon.png" alt="Facebook"> Facebook</button>
+                    <button class="btn-social">Apple</button>
                 </div>
-              </div>
-              <div class="frame-parent4">
-                <div class="input-labels-parent">
-                  <div class="input-labels">
-                    <b class="nome-completo">Nome Completo</b>
-                  </div>
-                  <div class="input-fields">
-                    <input
-                      class="input-field-containers"
-                      placeholder="Seu Nome Completo"
-                      type="text"
-                    />
+                <div class="divider"><span>Cadastrar-se com</span></div>
+            </div>
 
-                    <img class="vector-icon" alt="" />
-                  </div>
-                </div>
-                <div class="frame-parent5">
-                  <div class="crie-sua-conta-argus-wrapper">
-                    <b class="nome-completo">CPF</b>
-                  </div>
-                  <div class="digite-seu-cpf-wrapper">
-                    <input
-                      class="digite-seu-cpf"
-                      placeholder="Digite seu CPF"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="input-labels-parent">
-                  <b class="nome-completo">E-mail</b>
-                  <div class="frame-parent6">
-                    <input
-                      class="frame-input"
-                      placeholder="seu@gmail.com"
-                      type="text"
-                    />
-
-                    <img class="icon" alt="" />
-                  </div>
-                </div>
-                <div class="senha-parent">
-                  <b class="senha">Senha</b>
-                  <div class="checkbox-container-wrapper">
-                    <div class="frame-parent7">
-                      <input
-                        class="frame-child2"
-                        placeholder="***************"
-                        type="text"
-                      />
-
-                      <img class="eyefill-icon" alt="" />
+            <form>
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <div class="input-field">
+                        <input type="text" placeholder="Seu Nome Completo">
+                        <i class="fas fa-user"></i>
                     </div>
-                  </div>
                 </div>
-                <div class="confirmar-senha-parent">
-                  <b class="confirmar-senha">Confirmar Senha</b>
-                  <div class="checkbox-container-wrapper">
-                    <div class="frame-parent7">
-                      <input
-                        class="frame-child2"
-                        placeholder="***************"
-                        type="text"
-                      />
 
-                      <img class="eyefill-icon" alt="" />
+                <div class="input-group">
+                    <label>CPF</label>
+                    <div class="input-field">
+                        <input type="text" placeholder="Digite seu CPF">
                     </div>
-                  </div>
                 </div>
-                <div class="checkbox-container-wrapper">
-                  <div class="checkbox-container">
-                    <input class="checksquarefill" type="checkbox" />
 
-                    <div class="li-e-concordo-com-os-termos-de-wrapper">
-                      <div class="li-e-concordo">
-                        Li e concordo com os Termos de Consentimento e
-                        Tratamento de Dados conforme a LGPD.
-                      </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <div class="input-field">
+                        <input type="email" placeholder="seuemail@gmail.com">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="button-container">
-                <div class="button-wrapper">
-                  <button class="rectangle-group" type="submit">
-                    <div class="rectangle-div"></div>
-                    <div class="criar-minha-conta">Criar minha conta</div>
-                  </button>
-                  <div class="j-tem-conta-fazer-login-wrapper">
-                    <div class="j-tem-conta-container" id="jTemConta">
-                      <span class="j-tem-conta">Já tem conta? </span>
-                      <b class="fazer-login">Fazer Login</b>
+
+                <div class="input-group">
+                    <label>Senha</label>
+                    <div class="input-field">
+                        <input type="password" placeholder="***************">
+                        <i class="fas fa-eye"></i>
                     </div>
-                  </div>
                 </div>
-              </div>
+
+                <div class="input-group">
+                    <label>Confirmar Senha</label>
+                    <div class="input-field">
+                        <input type="password" placeholder="***************">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+
+                <div class="checkbox-area">
+                    <input type="checkbox" id="lgpd">
+                    <label for="lgpd">Li e concordo com os Termos de Consentimento e Tratamento de Dados conforme a LGPD.</label>
+                </div>
+
+                <button type="submit" class="btn-enter">Criar minha conta</button>
             </form>
-          </section>
-          <section class="left-side-editorial-visual-4">
-            <div class="background-image-guide-dog-in">
-              <img class="ab6axubtav-xswdvos-o-giegxcge6-icon" alt="" />
 
-              <div class="gradient"></div>
-            </div>
-            <div class="container">
-              <div class="container2">
-                <div class="background"></div>
-                <div class="heading-1">
-                  <h2 class="argus-vision">ARGUS VISION</h2>
-                </div>
-              </div>
-              <div class="container3"></div>
-              <img class="logo-icon" loading="lazy" alt="" />
+            <p class="signup-text">Já tem conta? <a href="./Login.html">Fazer Login</a></p>
+        </div>
+    </section>
 
-              <div class="container-inner">
-                <div class="heading-2-parent">
-                  <div class="heading-2">
-                    <h1 class="sua-autonomia-em-container">
-                      <span class="sua-autonomia-em-container2">
-                        <span class="sua-autonomia">Sua autonomia, </span>
-                        <span>em </span>
-                        <span class="qualquer">qualquer</span>
-                        <span> </span>
-                        <span class="lugar">lugar</span>
-                        <span>.</span>
-                      </span>
-                    </h1>
-                  </div>
-                  <div class="container-wrapper">
-                    <div class="container4">
-                      <b class="conecte-se-ao-seu"
-                        >Conecte-se ao seu parceiro e explore o mundo com total
-                        confiança.</b
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <aside class="login-hero">
+        <img src="../public/pageLoginCadastro/img.png" alt="Cão Guia" class="hero-bg-img">
+        <div class="hero-content">
+            <div class="logo-area">
+                <img src="../public/logo.png" alt="Logo" class="login-logo">
+                <span>ARGUS VISION</span>
             </div>
-            <div class="margin">
-              <div class="container5">
-                <div class="overlayborderoverlayblur">
-                  <div class="container6">
-                    <div class="o-argus-no">
-                      “O Argus não é só tecnologia; é uma nova forma de sentir o
-                      mundo ao meu redor. A precisão me deu a confiança que eu
-                      precisava para explorar novos lugares.”
-                    </div>
-                  </div>
-                  <div class="container7">
-                    <div class="container8">
-                      <img class="ab6axuc8v3ednacsqacmwvzygcxynt-icon" alt="" />
+            <h2 class="hero-title">Sua autonomia, <br><span class="highlight-orange">em </span> <span class="highlight-yellow">qualquer</span> <span class="highlight-blue">lugar</span>.</h2>
+            <p class="hero-subtitle">Conecte-se ao seu parceiro e explore o mundo com total confiança.</p>
 
-                      <img class="imgmargin-icon" alt="" />
-                    </div>
-                    <div class="heading-1">
-                      <div class="comunidade-argus">Comunidade Argus</div>
-                    </div>
-                  </div>
+            <div class="testimonial-bubble">
+                <p>“O Argus não é só tecnologia; é uma nova forma de sentir o mundo ao meu redor. A precisão me deu a confiança que eu precisava para explorar novos lugares.”</p>
+                <div class="testimonial-author">
+                    <img src="../public/pageLoginCadastro/comunityImg.png" alt="Comunidade">
+                    <span>COMUNIDADE ARGUS</span>
                 </div>
-              </div>
             </div>
-          </section>
-        </main>
-      </main>
-    </div>
+        </div>
+    </aside>
+</div>
 
     <script>
       var jTemConta = document.getElementById("jTemConta");
