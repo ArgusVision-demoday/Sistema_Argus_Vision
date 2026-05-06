@@ -64,10 +64,79 @@ img {
 .bg-lightblue { background-color: var(--primary-blue); }
 .bg-blue { background-color: var(--primary-blue); }
 
-.card-mission { background-color: var(--primary-blue); }
+.card-blue { background-color: var(--primary-blue); }
 .card-values { background-color: var(--primary-orange); }
 .card-vision { background-color: var(--dark-blue); color: var(--primary-orange); }
 .card-vision p { color: white; } /* Keep paragraph white */
+
+
+/* =========================================
+    BOTÕES (Componentes)
+    ========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
+
+.btn-outline {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-orange:hover {
+  background-color: #e05900;
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+.btn-yellow {
+  background-color: var(--primary-yellow);
+  color: var(--secondary-blue);
+  box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
+}
+
+.btn-yellow:hover {
+  background-color: #eab308;
+}
+
+.btn-dark {
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.btn-dark:hover {
+  background-color: #00174f;
+}
 
  /* HEADER & NAVEGAÇÃO */
 .header {

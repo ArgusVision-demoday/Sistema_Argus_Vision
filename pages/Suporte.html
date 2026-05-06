@@ -1,71 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ARGUS VISION, tecnologia assistiva, cães-guia">
+    <meta name="description" content="Site institucional do ARGUS VISION, um sistema de tecnologia assistiva para tutores de cães-guia, oferecendo mais autonomia e segurança durante os passeios. Conheça nosso produto inovador e faça parte da nossa comunidade!">
+    <meta name="author" content="Time Argus">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./Suport.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/produto.css" />
+    <title>Argus Vision</title>
   </head>
   <body>
-    <div class="suport">
-      <section class="page">
-        <div class="header-parent">
-          <header class="header2">
-            <div class="header-item"></div>
-            <div class="header3">
-              <img
-                class="group-icon"
-                loading="lazy"
-                alt=""
-                src="./public/Group-166@2x.png"
-              />
+   <header class="header">
+    <div class="container nav-container">
+      
+      <!-- Logo -->
+      <a href="#" class="logo-area" id="logoLink">
+        <div class="logo-img">
+          <img src="../public/logo.png" alt="Logo">
+        </div>
+        <span>ARGUS VISION</span>
+      </a>
 
-              <div class="logo2">
-                <h3 class="argus-vision5">ARGUS VISION</h3>
-              </div>
-            </div>
-            <div class="navigation">
-              <nav class="navigation-links2">
-                <h3 class="incio3" id="incioText">Início</h3>
-                <h3 class="sobre3">Sobre</h3>
-                <h3 class="produto3" id="produtoText">Produto</h3>
-                <h3 class="suporte3" id="suporteText">Suporte</h3>
-              </nav>
-            </div>
-            <div class="header-inner2">
-              <div class="profile-avatar-parent">
-                <button class="profile-avatar">
-                  <img
-                    class="personcircle-icon2"
-                    loading="lazy"
-                    alt=""
-                    src="./public/PersonCircle.svg"
-                    id="personCircleIcon"
-                  />
-                </button>
-                <div class="sign-up-button">
-                  <button
-                    class="sign-up-button-child"
-                    id="rectangleButton"
-                  ></button>
-                  <h3 class="cadastre-se3">Cadastre-se</h3>
-                </div>
-              </div>
-            </div>
-          </header>
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" target="_self"  id="navInicio">Início</a></li>
+          <li><a href="sobre.html" id="navSobre">Sobre</a></li>
+          <li><a href="Produto.html" id="navProduto">Produto</a></li>
+          <li><a href="desenvolvimento.html" id="navSuporte">Suporte</a></li>
+          <li class="mobile-only-btn" style="display: none;">
+            <button class="btn btn-blue" style="width: 100%"><a href="Cadastro.html">Cadastre-se</a></button></li>
+        </ul>
+      </nav>
+
+      <!-- Ações (Perfil e Botão) -->
+      <div class="user-actions">
+        <div class="icon-profile" id="btnProfile">
+          <a href="Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
+        </div>
+        <button class="btn btn-blue" id="btnCadastro"><a href="Cadastro.html">Cadastre-se</a></button>
+      </div>
+
+      <!-- Menu Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+    </div>
+  </header>
           <div class="frame-parent13">
             <img
               class="frame-child23"

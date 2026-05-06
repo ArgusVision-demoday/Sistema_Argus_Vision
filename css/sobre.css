@@ -49,6 +49,19 @@ width: 100%;
 .btn-dark:hover { background-color: #00174f; }
 
 /* === HERO SECTION === */
+.hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+}
+
 .hero-section {
     text-align: center;
     padding: 80px 20px 40px;
