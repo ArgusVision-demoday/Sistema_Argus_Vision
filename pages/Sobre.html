@@ -10,93 +10,118 @@
   </head>
   <body>
     <header class="header">
-        <div class="container nav-container">
-        
-        <!-- Logo -->
-        <a href="#" class="logo-area" id="logoLink">
-            <div class="logo-img">
-            <img src="../public/logo.png" alt="Logo">
-            </div>
-            <span>ARGUS VISION</span>
-        </a>
-
-        <!-- Navegação -->
-        <nav>
-            <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" target="_self"  id="navInicio">Início</a></li>
-            <li><a href="Sobre.html" id="navSobre">Sobre</a></li>
-            <li><a href="Produto.html" id="navProduto">Produto</a></li>
-            <li><a href="Suporte.html" id="navSuporte">Suporte</a></li>
-            <li class="mobile-only-btn" style="display: none;">
-                <button type="button" class="btn btn-blue"><a href="Cadastro.html">Cadastre-se</a></button></li>
-            </ul>
-        </nav>
-
-        <!-- Ações (Perfil e Botão) -->
-        <div class="user-actions">
-            <div class="icon-profile" id="btnProfile">
-            <a href="Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
-            </div>
-            <button type="button" class="btn btn-blue" id="btnCadastro"><a href="Cadastro.html">Cadastre-se</a></button>
+    <div class="container nav-container">
+      
+      <!-- Logo -->
+      <a href="#" class="logo-area" id="logoLink">
+        <div class="logo-img">
+          <img src="../public/logo.png" alt="Logo">
         </div>
+        <span>ARGUS VISION</span>
+      </a>
 
-        <!-- Menu Mobile Toggle -->
-        <button class="menu-toggle" id="menuToggle">☰</button>
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" target="_self"  id="navInicio">Início</a></li>
+          <li><a href="Sobre.html" id="navSobre">Sobre</a></li>
+          <li><a href="Produto.html" id="navProduto">Produto</a></li>
+          <li><a href="Suporte.html" id="navSuporte">Suporte</a></li>
+          <li class="mobile-only-btn" style="display: none;">
+            <button type="button" class="btn btn-blue"><a href="Cadastro.html">Cadastre-se</a></button></li>
+        </ul>
+      </nav>
 
+      <!-- Ações (Perfil e Botão) -->
+      <div class="user-actions">
+        <div class="icon-profile" id="btnProfile">
+          <a href="Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
         </div>
-    </header>
+        <button type="button" class="btn btn-blue" id="btnCadastro"><a href="Cadastro.html">Cadastre-se</a></button>
+      </div>
+
+      <!-- Menu Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+    </div>
+  </header>
 
     <!-- SEÇÃO HERO -->
-    <main>
-        <img src="../public/pageAbout/equipe.png" class="hero" alt="Imagem de Capa"/>
-
+    <main class="container">
+        <img src="../public/pageAbout/equipe.png" alt="Imagem de Capa" class="hero-image"/>
         <section class="hero-section">
+            <div class="text-elion">
+                <h1>Criadores da <span>Argus Vision</span></h1>
+                <p class="hero-description">
+                    Cada rosto aqui não mediu esforços para fazer esse projeto ganhar vida, e garantir que a Argus fosse não só inovadora, mas um produto capaz de transformar a forma com que os deficiêntes visuais passeiam com seus cães-guia. Juntos realizamos pesquisas, desenvolvimento tecnológico, design de interface e negócios.
+                </p>
+            </div>
             <img src="../public/pageAbout/elion2.png" class="elion-image" alt="Elion"/>
-            <h1>Criadores da <span>Argus Vision</span></h1>
-            <p class="hero-description">
-                Cada rosto aqui não mediu esforços para fazer esse projeto ganhar vida, e garantir que a Argus fosse não só inovadora, mas um produto capaz de transformar a forma com que os deficiêntes visuais passeiam com seus cães-guia. Juntos realizamos pesquisas, desenvolvimento tecnológico, design de interface e negócios.
-            </p>
         </section>
 
         <!-- MISSÃO, VALORES, VISÃO -->
         <section class="info-cards-container">
-            <div class="info-card card-blue">
+            <div class="info-card card-mission">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionMissao.png"/></div>
-                <h3>Missão</h3>
+                <h3 class="missao">Missão</h3>
                 <p>Promover mais autonomia, segurança e inclusão social de pessoas com deficiência visual, ao passearem com seus cães-guia.</p>
             </div>
 
-            <div class="info-card card-orange">
+            <div class="info-card card-values">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionVisao.png"/></div>
-                <h3>Valores</h3>
-                <p>Empatia com o usuário, foco total em acessibilidade, inovação contínua e profundo respeito e cuidado com o bem-estar animal.</p>
+                <h3 class="visao">Visão</h3>
+                <p>Ser pioneiros nacionais no desenvolvimento de tecnologias assistivas integradas para cães-guia.</p>
             </div>
 
             <div class="info-card card-vision">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionValores.png"/></div>
-                <h3>Visão</h3>
-                <p>Ser pioneiros nacionais no desenvolvimento de tecnologias assistivas integradas para cães-guia.</p>
+                <h3 class="valores">Valores</h3>
+                <p>Empatia com o usuário, foco total em acessibilidade, inovação contínua e profundo respeito e cuidado com o bem-estar animal.</p>
             </div>
+
+            
         </section>
 
         <!-- INOVAÇÃO E HORIZONTES -->
         <section class="innovation-section">
-            <div class="innovation-box">
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="../public/pageAbout/card1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../public/pageAbout/card2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="../public/pageAbout/card3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- <div class="innovation-box">
                 <h2>Inovação</h2>
                 <h3>Da ideia à tecnologia inclusiva</h3>
                 <p>Transformamos necessidades reais em soluções inteligentes. Com sensores e design pensado para cães-guia, criamos um sistema que promove autonomia e segurança para pessoas com deficiência visual.</p>
-            </div>
+            </div> -->
 
             <div class="horizon-box">
-                <h2>Rumo a novos horizontes</h2>
-                <p>Nosso objetivo é levar a ARGUS cada vez mais longe. Estamos construindo parcerias e preparando o caminho para que nossa tecnologia inclusiva alcance diferentes regiões, ampliando o impacto e transformando vidas além das fronteiras locais.</p>
+                <h2>Rumo a novos <br> horizontes</h2>
+                <p>Nosso objetivo é expandir a ARGUS, levando nossa tecnologia inclusiva para diferentes regiões e transformando vidas além das fronteiras locais.</p>
             </div>
         </section>
 
         <!-- OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL -->
         <section class="ods-section">
-            <img src="../public/pageAbout/ODS.png" alt="Imagem ODS Cidade" class="ods-image-full"/>
-            <!-- Conteúdo ODS
+            <img src="../public/pageAbout/cidade.png" alt="Imagem ODS Cidade" class="ods-city-bg"/>
+            <!-- <img src="../public/pageAbout/formaOnda.png" alt="Onda Decorativa" class="ods-wave-bg " /> -->
+            
             <div class="ods-content">
                 <div class="ods-header">
                     <h2>Compromisso com o Futuro Sustentável</h2>
@@ -104,7 +129,7 @@
                 </div>
 
                 <div class="ods-grid">
-                    <div class="ods-item">
+                    <div class="ods-item ods3">
                         <div class="ods-image-placeholder"><img src="../public/pageAbout/ods3.png" alt="ODS 3" /></div>
                         <div class="ods-text">
                             <h4>ODS 3: Boa saúde e bem-estar:</h4>
@@ -112,22 +137,22 @@
                         </div>
                     </div>
 
-                    <div class="ods-item">
+                    <div class="ods-item ods9">
                         <div class="ods-image-placeholder"><img src="../public/pageAbout/ods9.png" alt="ODS 9"/></div>
                         <div class="ods-text">
                             <h4>ODS 9: Indústria, inovação e infraestrutura:</h4>
                             <p>Contribuímos para cidades mais inclusivas e seguras, onde a mobilidade assistida é parte essencial da infraestrutura urbana.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="ods-item">
+                <div class="ods-item ods10">
                         <div class="ods-image-placeholder"><img src="../public/pageAbout/ods10.png" alt="ODS 10"></div>
                         <div class="ods-text">
                             <h4>ODS 10: Redução das Desigualdades:</h4>
-                            <p>Promovemos a participação plena de pessoas com deficiência visual, fortalecendo sua autonomia e presença ativa na sociedade.</p>
+                            <p>Promovemos a participação plena de pessoas com deficiência visual, <br> fortalecendo sua autonomia e presença ativa na sociedade.</p>
                         </div>
                     </div>
-                </div> -->
             </div>
         </section>
 
@@ -136,7 +161,8 @@
             <h2 class="team-title">Equipe <span>Argus</span></h2>
 
             <div class="team-layout">
-                <!-- Linha 1 -->
+
+                <!-- Linha 2 -->
                 <div class="team-row">
                     <div class="team-card">
                         <div class="team-photo">
@@ -146,14 +172,11 @@
                            <h3>Esther Dourado</h3>
                             <p>Product Owner, Desenvolvedora Full Stack</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Linha 2 -->
-                <div class="team-row">
                     <div class="team-card">
                         <div class="team-photo">
                           <img src="../public/pageAbout/membroRenan.png" alt="Foto de Renan Teixeira" class="team-photo-img">
@@ -162,11 +185,11 @@
                             <h3>Renan Teixeira</h3>
                             <p>Scrum Master, Desenvolvedor Full Stack</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="team-card">
+                    <!-- <div class="team-card">
                         <div class="team-photo">
                           <img src="../public/pageAbout/membroPedro.png" alt="Foto de Pedro Sobreira" class="team-photo-img">
                         </div>
@@ -177,7 +200,7 @@
                                 <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Linha 3 -->
@@ -190,7 +213,7 @@
                             <h3>Mary Lacerda</h3>
                             <p>Desenvolvedora Full Stack, UI/UX Design</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -202,7 +225,7 @@
                             <h3>Evelyn Alves</h3>
                             <p>Desenvolvedora Full Stack, Marketing</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -214,11 +237,11 @@
                         <div class="team-photo">
                           <img src="../public/pageAbout/membroJoao.png" alt="Foto de João Vitor Monteiro" class="team-photo-img">
                         </div>
-                        <div class="team-info bg-blue">
+                        <div class="team-info bg-orange">
                             <h3>João Vitor Monteiro</h3>
                             <p>Desenvolvedor Full Stack</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -226,11 +249,11 @@
                         <div class="team-photo">
                           <img src="../public/pageAbout/membroMatheus.png" alt="Foto de Matheus Silveira" class="team-photo-img">
                         </div>
-                        <div class="team-info bg-orange">
+                        <div class="team-info bg-yellow">
                             <h3>Matheus Silveira</h3>
                             <p>Desenvolvedor Full Stack, Financeiro</p>
                             <div class="social-icons">
-                                <div><img src="../public/icons/Social-Icons1.svg"></div><div><img src="../public/icons/Social-Icons2.svg"></div>
+                                <a href="" target="_blank"><img src="../public/icons/Social-Icons1.svg"></a><a href="" target="_blank"><img src="../public/icons/Social-Icons2.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -238,12 +261,13 @@
             </div>
         </section>
     </main>
-    <!-- ================= FOOTER ================= -->
-   <footer>
+
+    <!-- FOOTER -->
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                  <a href="#" class="logo-area-footer" id="logoLink">
+                  <a href="./Index.html" class="logo-area-footer" id="logoLink">
                     <div class="logo-img">
                       <img src="../public/logoFooter.png" alt="Logo">
                     </div>
@@ -288,6 +312,131 @@
             </div>
         </div>
     </footer>
+
+<!-- LINK DO BOOTSTRAP CORRIGIDO (JAVASCRIPT) -->
+    <script>
+    // Configuração do Menu Mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const mobileOnlyBtn = document.querySelector(".mobile-only-btn");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        
+        // Altera o ícone baseado no estado do menu
+        if(navLinks.classList.contains("active")) {
+          menuToggle.innerText = "✕"; // Fechar
+          if (window.innerWidth <= 600) mobileOnlyBtn.style.display = "block";
+        } else {
+          menuToggle.innerText = "☰"; // Hamburger
+          mobileOnlyBtn.style.display = "none";
+        }
+      });
+    }
+
+    // Ocultar menu ao redimensionar tela de volta para Desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        navLinks.classList.remove("active");
+        menuToggle.innerText = "☰";
+        if(mobileOnlyBtn) mobileOnlyBtn.style.display = "none";
+      }
+    });
+
+    // Navegação simples adaptada para os IDs limpos
+    const safeAddListener = (id, callback) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.addEventListener("click", callback);
+      }
+    };
+
+    /* safeAddListener("logoLink", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navInicio", (e) => { e.preventDefault(); window.location.href = "/"; });
+    safeAddListener("navSobre", (e) => { e.preventDefault(); window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("navProduto", (e) => { e.preventDefault(); });
+    safeAddListener("navSuporte", (e) => { e.preventDefault(); window.location.href = "./pages/Suporte.html"; });
+    safeAddListener("btnProfile", () => { window.location.href = "./pages/Login.html"; });
+    safeAddListener("btnCadastro", () => { window.location.href = "./pages/Cadastro.html"; });
+    safeAddListener("btnSaibaMais", () => { window.location.href = "./pages/Sobre.html"; });
+    safeAddListener("btnExplorar", () => {} });
+    safeAddListener("btnElion", () => {}); */
+
+    // ==========================================
+    // ALTERADO: Lógica do Carrossel de Feedbacks
+    // ==========================================
+    const track = document.getElementById("carouselTrack");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+
+    if(track && prevBtn && nextBtn) {
+      // Ao clicar em 'Anterior'
+      prevBtn.addEventListener("click", () => {
+        // Pega a largura exata do primeiro cartão visível para saber quanto deslizar
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Subtrai a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: -(cardWidth + 20), behavior: 'smooth' });
+      });
+
+      // Ao clicar em 'Próximo'
+      nextBtn.addEventListener("click", () => {
+        const cardWidth = track.querySelector(".testimonial-card").offsetWidth;
+        // Adiciona a rolagem horizontal pela largura do card + o gap (20px)
+        track.scrollBy({ left: (cardWidth + 20), behavior: 'smooth' });
+      });
+    }
+
+    // ==========================================
+// LÓGICA DO CARROSSEL VANILLA (Sem Bootstrap)
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carouselExampleDark");
+    
+    if (carousel) {
+        const items = carousel.querySelectorAll(".carousel-item");
+        const indicators = carousel.querySelectorAll(".carousel-indicators button");
+        let currentIndex = 0;
+        let timeoutId = null;
+
+        function showSlide(index) {
+            // Remove as classes ativas de todos os itens e indicadores
+            items.forEach(item => item.classList.remove("active"));
+            indicators.forEach(ind => ind.classList.remove("active"));
+
+            // Atualiza o índice atual garantindo o loop correto
+            currentIndex = (index + items.length) % items.length;
+
+            // Ativa o slide correspondente
+            items[currentIndex].classList.add("active");
+            if (indicators[currentIndex]) {
+                indicators[currentIndex].classList.add("active");
+            }
+
+            // Pega o tempo definido individualmente no HTML através do 'data-bs-interval'
+            // Se não houver, adota 5000ms (5 segundos) como padrão
+            const interval = parseInt(items[currentIndex].getAttribute("data-bs-interval")) || 5000;
+
+            // Limpa o temporizador antigo e inicia um novo ciclo
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                showSlide(currentIndex + 1);
+            }, interval);
+        }
+
+        // Adiciona evento de clique para os indicadores (bolinhas)
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener("click", () => {
+                showSlide(index);
+            });
+        });
+
+        // Inicializa o carrossel no primeiro slide
+        showSlide(currentIndex);
+    }
+});
+  </script>
+
 
 </body>
 </html>
