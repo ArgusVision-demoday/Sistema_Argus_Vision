@@ -9,40 +9,41 @@
     <title>Argus Vision</title>
   </head>
   <body>
-     <header class="header">
-    <div class="container nav-container">
-      
-      <!-- Logo -->
-      <a href="#" class="logo-area" id="logoLink">
-        <div class="logo-img">
-          <img src="../public/logo.png" alt="Logo">
+    <header class="header">
+        <div class="container nav-container">
+        
+        <!-- Logo -->
+        <a href="#" class="logo-area" id="logoLink">
+            <div class="logo-img">
+            <img src="../public/logo.png" alt="Logo">
+            </div>
+            <span>ARGUS VISION</span>
+        </a>
+
+        <!-- Navegação -->
+        <nav>
+            <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" target="_self"  id="navInicio">Início</a></li>
+            <li><a href="Sobre.html" id="navSobre">Sobre</a></li>
+            <li><a href="Produto.html" id="navProduto">Produto</a></li>
+            <li><a href="Suporte.html" id="navSuporte">Suporte</a></li>
+            <li class="mobile-only-btn" style="display: none;">
+                <button type="button" class="btn btn-blue"><a href="Cadastro.html">Cadastre-se</a></button></li>
+            </ul>
+        </nav>
+
+        <!-- Ações (Perfil e Botão) -->
+        <div class="user-actions">
+            <div class="icon-profile" id="btnProfile">
+            <a href="Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
+            </div>
+            <button type="button" class="btn btn-blue" id="btnCadastro"><a href="Cadastro.html">Cadastre-se</a></button>
         </div>
-        <span>ARGUS VISION</span>
-      </a>
 
-      <!-- Navegação -->
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" id="navInicio">Início</a></li>
-          <li><a href="Sobre.html" id="navSobre">Sobre</a></li>
-          <li><a href="Produto.html" id="navProduto">Produto</a></li>
-          <li><a href="Desenvolvimento.html" id="navSuporte">Suporte</a></li>
-          <li class="mobile-only-btn" style="display: none;"><button class="btn btn-blue" style="width: 100%">Cadastre-se</button></li>
-        </ul>
-      </nav>
+        <!-- Menu Mobile Toggle -->
+        <button class="menu-toggle" id="menuToggle">☰</button>
 
-      <!-- Ações (Perfil e Botão) -->
-      <div class="user-actions">
-        <div class="icon-profile" id="btnProfile">
-          <svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
         </div>
-        <button class="btn btn-blue" id="btnCadastro">Cadastre-se</button>
-      </div>
-
-      <!-- Menu Mobile Toggle -->
-      <button class="menu-toggle" id="menuToggle">☰</button>
-
-    </div>
     </header>
 
     <!-- SEÇÃO HERO -->
@@ -94,9 +95,8 @@
 
         <!-- OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL -->
         <section class="ods-section">
-            <img src="../public/pageAbout/cidade.png" alt="Imagem ODS Cidade" class="ods-city-bg"/>
-            <img src="../public/pageAbout/formaOnda.png" alt="Onda Decorativa" class="ods-wave-bg" />
-            
+            <img src="../public/pageAbout/ODS.png" alt="Imagem ODS Cidade" class="ods-image-full"/>
+            <!-- Conteúdo ODS
             <div class="ods-content">
                 <div class="ods-header">
                     <h2>Compromisso com o Futuro Sustentável</h2>
@@ -127,7 +127,7 @@
                             <p>Promovemos a participação plena de pessoas com deficiência visual, fortalecendo sua autonomia e presença ativa na sociedade.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -269,8 +269,8 @@
                 <div class="footer-links">
                     <h4>Suporte</h4>
                     <ul>
-                        <li><a href="Desenvolvimento.html">Fale conosco</a></li>
-                        <li><a href="Desenvolvimento.html">Dúvidas Frequentes (FAQ)</a></li>
+                        <li><a href="Suporte.html">Fale conosco</a></li>
+                        <li><a href="Suporte.html">Dúvidas Frequentes (FAQ)</a></li>
                     </ul>
                 </div>
 

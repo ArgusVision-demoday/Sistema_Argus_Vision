@@ -3,516 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="ARGUS VISION, tecnologia assistiva, cães-guia">
-    <meta name="description" content="Site institucional do ARGUS VISION, um sistema de tecnologia assistiva para tutores de cães-guia, oferecendo mais autonomia e segurança durante os passeios. Conheça nosso produto inovador e faça parte da nossa comunidade!">
-    <meta name="author" content="Time Argus">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="ARGUS VISION, tecnologia assistiva, cães-guia, suporte">
+    <meta name="description" content="Central de Suporte ARGUS VISION. Aprenda a usar o dispositivo, veja as perguntas frequentes ou entre em contato com nossa equipe.">
+    <title>Suporte - Argus Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Suport.css">
+    <link rel="stylesheet" href="../css/global.css">
 
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/produto.css" />
-    <title>Argus Vision</title>
-  </head>
-  <body>
-   <header class="header">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
     <div class="container nav-container">
-      
-      <!-- Logo -->
-      <a href="#" class="logo-area" id="logoLink">
+
+      <a href="index.html" class="logo-area" id="logoLink">
         <div class="logo-img">
-          <img src="../public/logo.png" alt="Logo">
+          <img src="../public/logo.png" alt="Logo Argus Vision">
         </div>
         <span>ARGUS VISION</span>
       </a>
 
-      <!-- Navegação -->
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" target="_self"  id="navInicio">Início</a></li>
-          <li><a href="sobre.html" id="navSobre">Sobre</a></li>
-          <li><a href="Produto.html" id="navProduto">Produto</a></li>
-          <li><a href="desenvolvimento.html" id="navSuporte">Suporte</a></li>
+          <li><a href="index.html" id="navInicio">Início</a></li>
+          <li><a href="Sobre.html" id="navSobre">Sobre</a></li>
+          <li><a href="Produto.html" id="navProduto" aria-current="page">Produto</a></li>
+          <li><a href="Suporte.html" id="navSuporte">Suporte</a></li>
           <li class="mobile-only-btn" style="display: none;">
-            <button class="btn btn-blue" style="width: 100%"><a href="Cadastro.html">Cadastre-se</a></button></li>
+            <button type="button" class="btn btn-blue"><a href="Cadastro.html">Cadastre-se</a></button></li>
         </ul>
       </nav>
 
-      <!-- Ações (Perfil e Botão) -->
       <div class="user-actions">
         <div class="icon-profile" id="btnProfile">
-          <a href="Login.html"><svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></a>
+          <a href="Login.html" aria-label="Acessar perfil">
+            <svg viewBox="0 0 24 24" fill="var(--primary-blue)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </svg>
+          </a>
         </div>
-        <button class="btn btn-blue" id="btnCadastro"><a href="Cadastro.html">Cadastre-se</a></button>
+        <a href="Cadastro.html" class="btn btn-blue" id="btnCadastro">Cadastre-se</a>
       </div>
 
-      <!-- Menu Mobile Toggle -->
-      <button class="menu-toggle" id="menuToggle">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
     </div>
   </header>
-          <div class="frame-parent13">
-            <img
-              class="frame-child23"
-              loading="lazy"
-              alt=""
-              src="./public/Group-77@2x.png"
-            />
 
-            <h2 class="suporte-argus">Suporte ARGUS</h2>
-            <div class="bem-vindo-central">
-              Bem-vindo à Central de Suporte ARGUS. Escolha uma das opções
-              abaixo para aprender, atualizar ou pedir ajuda.
+    <main>
+        <!-- HERO SUPPORT -->
+        <section class="hero-support container">
+            <div class="hero-card">
+                
+                <div class="hero-bg">
+                    <img src="../public/pageSuport/Group-77@2x.png" alt="Mulher usando aplicativo Argus">
+                </div>
+                <div class="hero-content">
+                    <h1>Suporte ARGUS</h1>
+                    <p>Bem-vindo à Central de Suporte ARGUS. Escolha uma das opções abaixo para aprender, atualizar ou pedir ajuda.</p>
+                </div>
+                  
             </div>
-          </div>
-        </div>
-      </section>
-      <main class="guide-container-parent">
-        <div class="guide-container">
-          <div class="guide-card-parent">
-            <div class="guide-card">
-              <h2 class="guia-de-uso">Guia de Uso</h2>
-            </div>
-            <div class="carousel-buttons">
-              <img
-                class="arrowleftcirclefill-icon"
-                alt=""
-                src="./public/ArrowLeftCircleFill.svg"
-              />
+        </section>
 
-              <img
-                class="arrowrightcirclefill-icon"
-                alt=""
-                src="./public/ArrowRightCircleFill.svg"
-              />
-            </div>
-            <section class="guide-content">
-              <div class="connection-guide">
-                <div class="decorations-parent">
-                  <div class="decorations"></div>
-                  <img
-                    class="copilot-20260329-075952-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./public/Copilot-20260329-075952-1@2x.png"
-                  />
-
-                  <div class="instructions">
-                    <div class="conecte-o-argus-container">
-                      <ol class="conecte-o-argus-guia-do-co">
-                        <li>Conecte o ARGUS à guia do cão.</li>
-                      </ol>
+        <!-- GUIA DE USO -->
+        <section class="section container">
+            <h2 class="section-title">Guia de Uso</h2>
+            <div class="guia-grid">
+                
+                <div class="guia-card orange">
+                    <div class="guia-img">
+                        <img src="../public/pageSuport/conexao_coleira_argus.png" alt="Conectando à guia do cão" onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ce8cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
                     </div>
-                  </div>
-                </div>
-                <div class="rectangle-parent10">
-                  <div class="frame-child24"></div>
-                  <img
-                    class="copilot-20260329-081506-1-icon"
-                    loading="lazy"
-                    alt=""
-                    src="./public/Copilot-20260329-081506-1@2x.png"
-                  />
-
-                  <div class="ligue-o-dispositivo-e-aguarde-wrapper">
-                    <div class="ligue-o-dispositivo-container">
-                      <ol class="conecte-o-argus-guia-do-co">
-                        <li>
-                          Ligue o dispositivo e aguarde o pareamento com o
-                          aplicativo.
-                        </li>
-                      </ol>
+                    <div class="guia-text">
+                        <h3>1. Conecte o ARGUS à guia do cão.</h3>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="image-container">
-                <div class="image-background">
-                  <div class="background-decoration"></div>
-                  <div class="background-decoration2"></div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="rectangle-parent11">
-          <div class="frame-child25"></div>
-          <div class="f-a-q-header">
-            <h2 class="perguntas-frequentes-faq">Perguntas Frequentes (FAQ)</h2>
-          </div>
-          <section class="f-a-q-list">
-            <div class="rectangle-parent12">
-              <div class="frame-child26"></div>
-              <b class="preciso-de-internet">Preciso de internet para usar?</b>
-              <div class="no-durante-o">
-                Não durante o uso. Apenas para atualizações e configurações via
-                app.
-              </div>
-            </div>
-            <div class="rectangle-parent13">
-              <div class="frame-child26"></div>
-              <b class="funciona-com-qualquer"
-                >Funciona com qualquer cão-guia?</b
-              >
-              <div class="sim-o-design">
-                Sim, o design é compatível com guias padrão.
-              </div>
-            </div>
-            <div class="rectangle-parent13">
-              <div class="frame-child26"></div>
-              <b class="o-dispositivo">O dispositivo é resistente à chuva?</b>
-              <div class="sim-o-design">
-                Sim, é resistente à água e ao uso urbano diário.
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="frame-wrapper11">
-          <div class="rectangle-parent15">
-            <div class="frame-child29"></div>
-            <section class="app-details">
-              <div class="app-descriptions-parent">
-                <div class="app-descriptions">
-                  <h1 class="baixe-o-aplicativo">Baixe o Aplicativo</h1>
-                  <h2 class="disponvel-para-android">
-                    Disponível para Android e iOS
-                  </h2>
-                  <div class="acesse-a-loja">
-                    Acesse a loja de aplicativos do seu celular e procure por
-                    ARGUS Mobilidade. Instale gratuitamente e comece a explorar
-                    uma nova forma de caminhar com autonomia.
-                  </div>
-                </div>
-                <div class="app-store-links">
-                  <div class="store-links">
-                    <button class="rectangle-parent16">
-                      <div class="frame-child30"></div>
-                      <img
-                        class="image-10-icon"
-                        alt=""
-                        src="./public/image-10@2x.png"
-                      />
 
-                      <div class="store-names">
-                        <b class="app-store">APP STORE</b>
-                      </div>
-                    </button>
-                    <button class="rectangle-parent17">
-                      <div class="frame-child30"></div>
-                      <img
-                        class="image-11-icon"
-                        alt=""
-                        src="./public/image-11@2x.png"
-                      />
-
-                      <div class="store-names">
-                        <b class="play-store">PLAY STORE</b>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="copilot-20260410-204303-1-ph-parent">
-              <img
-                class="copilot-20260410-204303-1-ph-icon"
-                alt=""
-                src="./public/Copilot-20260410-204303-1-Photoroom-1@2x.png"
-              />
-
-              <img
-                class="logo-icon2"
-                loading="lazy"
-                alt=""
-                src="./public/logo@2x.png"
-              />
-            </div>
-          </div>
-        </div>
-      </main>
-      <section class="contact-details-wrapper">
-        <div class="contact-details">
-          <section class="contact-information">
-            <div class="fale-com-a-gente-parent">
-              <h2 class="fale-com-a">Fale com a Gente</h2>
-              <div class="message-details">
-                <div class="tem-dvidas-sugestes">
-                  Tem dúvidas, sugestões ou quer saber mais sobre o ARGUS?
-                  Preencha o formulário abaixo e entraremos em contato com você
-                  o mais breve possível.
-                </div>
-              </div>
-            </div>
-            <div class="contact-icons3">
-              <div class="contact-types">
-                <img
-                  class="envelopefill-icon"
-                  loading="lazy"
-                  alt=""
-                  src="./public/EnvelopeFill.svg"
-                />
-
-                <div class="contact-category">
-                  <div class="category-labels">
-                    <h3 class="email-suporte">Email Suporte</h3>
-                    <div class="suportearguscom">suporte@argus.com</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="contact-icons4">
-              <div class="contact-types">
-                <img
-                  class="envelopefill-icon"
-                  loading="lazy"
-                  alt=""
-                  src="./public/TelephoneFill.svg"
-                />
-
-                <div class="frame-wrapper12">
-                  <div class="category-labels">
-                    <h3 class="telefone-suporte">Telefone Suporte</h3>
-                    <div class="div">+55 (11) 9 99999-9999</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="contact-details-inner">
-            <div class="rectangle-parent18">
-              <div class="frame-child32"></div>
-              <div class="name-email-input-parent">
-                <div class="name-email-input">
-                  <div class="input-labels">
-                    <h3 class="nome-completo">Nome Completo</h3>
-                    <input
-                      class="input-labels-child"
-                      placeholder="Digite seu nome completo"
-                      type="text"
-                    />
-                  </div>
-                  <div class="input-labels2">
-                    <h3 class="nome-completo">Email</h3>
-                    <input
-                      class="input-labels-item"
-                      placeholder="seunome@gmail.com"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="assunto-parent">
-                  <h3 class="nome-completo">Assunto</h3>
-                  <input
-                    class="group-input"
-                    placeholder="Digite o assunto que gostaria de tratar conosco"
-                    type="text"
-                  />
-                </div>
-                <div class="message-area">
-                  <div class="message-header">
-                    <h3 class="mensagem">Mensagem</h3>
-                    <div class="rectangle-parent19">
-                      <div class="frame-child33"></div>
-                      <div class="nos-conte-como">
-                        Nos conte como podemos te ajudar...
-                      </div>
+                <div class="guia-card darkblue">
+                    <div class="guia-img">
+                        <img src="../public/pageSuport/tela_de_conexao.png" alt="Pareamento com aplicativo" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
                     </div>
-                  </div>
+                    <div class="guia-text">
+                        <h3>2. Ligue o dispositivo e aguarde o pareamento com o aplicativo.</h3>
+                    </div>
                 </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section container">
+          <h2 class="section-title blue">Perguntas Frequentes (FAQ)</h2>
+          <div class="faq-list">
+              
+              <div class="faq-item">
+                  <h4>Preciso de internet para usar?</h4>
+                  <p>Não durante o uso. Apenas para atualizações e configurações via app.</p>
               </div>
-              <div class="submit-button">
-                <button class="rectangle-parent20">
-                  <div class="frame-child34"></div>
-                  <b class="enviar-mensagem">Enviar Mensagem</b>
+
+              <div class="faq-item">
+                  <h4>Funciona com qualquer cão-guia?</h4>
+                  <p>Sim, o design é compatível com guias padrão.</p>
+              </div>
+
+              <div class="faq-item">
+                  <h4>O dispositivo é resistente à chuva?</h4>
+                  <p>Sim, é resistente à água e ao uso urbano diário.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- DOWNLOAD APP -->
+        <section class="download-app">
+          <div class="download-wrapper">
+            <div class="download-text">
+              <h2>Baixe o Aplicativo</h2>
+              <h3>Disponível para Android e iOS</h3>
+              <p>Acesse a loja de aplicativos do seu celular e procure por ARGUS Mobilidade. Instale gratuitamente e comece a explorar uma nova forma de caminhar com autonomia.</p>
+              
+              <div class="store-buttons">
+                <button type="button"  class="btn btn-dark">
+                  <p><img src="../public/logoPlayStore.png" alt="Google Play"> Google Play</p>
+                </button>
+                <button type="button" class="btn btn-dark">
+                  <p><img src="../public/logoAppStore.png" alt="App Store"> App Store</p>
                 </button>
               </div>
             </div>
-          </section>
-        </div>
-      </section>
-      <section class="footer2">
-        <div class="footer-item"></div>
-        <div class="footer3">
-          <div class="argus-todos2">
-            © 2026 ARGUS - Todos os Direitos Reservados | Termos e Condições |
-            Política de Privacidade
+            
+            <div class="app-mockup">
+              <img src="../public/app-mockup.png" alt="App Mockup"/>
+            </div>
           </div>
-          <b class="legal2">Legal</b>
-          <b class="argus-vision6">ARGUS VISION</b>
-          <div class="tecnologia-assistiva-para2">
-            Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais
-            autonomia ao passear com seu cão
-          </div>
-          <b class="nos-siga2">Nos siga</b>
-          <img class="vector-icon21" alt="" src="./public/Social-Icons.svg" />
+        </section>
 
-          <img class="vector-icon22" alt="" src="./public/Social-Icons1.svg" />
+        <!-- CONTATO -->
+        <section class="section container">
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <h2>Fale com a Gente</h2>
+                    <p>Tem dúvidas, sugestões ou quer saber mais sobre o ARGUS? Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Email Suporte</h4>
+                                <span>suporte@argus.com</span>
+                            </div>
+                        </div>
 
-          <img class="vector-icon23" alt="" src="./public/Social-Icons2.svg" />
-
-          <div class="line-container">
-            <div class="frame-child35"></div>
-            <div class="frame-child36"></div>
-          </div>
-          <b class="institucional2">Institucional</b>
-          <b class="suporte4">Suporte</b>
-          <div class="footer-inner"></div>
-          <section class="footer-content2">
-            <div class="frame-parent14">
-              <div class="frame-parent15">
-                <div class="frame-parent16">
-                  <div class="frame-parent17">
-                    <div class="frame-parent18">
-                      <div class="untitled-project-1-photoroom-group">
-                        <img
-                          class="untitled-project-1-photoroom2"
-                          alt=""
-                          src="./public/Untitled-Project-1-Photoroom-1@2x.png"
-                        />
-
-                        <img
-                          class="untitled-project-1-photoroom3"
-                          alt=""
-                          src="./public/Untitled-Project-1-Photoroom-1@2x.png"
-                        />
-                      </div>
-                      <div class="argus-vision-wrapper">
-                        <h3 class="argus-vision7">ARGUS VISION</h3>
-                      </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Telefone Suporte</h4>
+                                <span>+55 (11) 9 9999-9999</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tecnologia-assistiva-para3">
-                      Tecnologia Assistiva para tutores de Cães-Guia: Trazendo
-                      mais autonomia ao passear com seu cão
-                    </div>
-                  </div>
-                  <h3 class="nos-siga3">Nos siga</h3>
                 </div>
-                <div class="frame-wrapper13">
-                  <div class="institucional-column-parent">
-                    <div class="institucional-column">
-                      <h3 class="institucional3">Institucional</h3>
-                      <div class="navigation-links3">
-                        <div class="incio-parent">
-                          <div class="incio4">Início</div>
-                          <div class="sobre4">Sobre</div>
-                          <div class="sobre4">Produto</div>
-                        </div>
-                        <div class="incio-group">
-                          <div class="incio4">Início</div>
-                          <div class="sobre4">Sobre</div>
-                          <div class="produto5" id="produtoText2">Produto</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="suporte-group">
-                      <h3 class="suporte5">Suporte</h3>
-                      <div class="support-column">
-                        <div class="contact-links">
-                          <div class="fale-conosco-parent">
-                            <div class="incio4">Fale conosco</div>
-                            <div class="incio4">Dúvidas Frequentes(FAQ)</div>
-                          </div>
-                          <div class="fale-conosco-group">
-                            <div class="incio4">Fale conosco</div>
-                            <div class="incio4">Dúvidas Frequentes(FAQ)</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="legal-parent">
-                      <h3 class="legal3">Legal</h3>
-                      <div class="legal-links">
-                        <div class="politica-de-privacidade-group">
-                          <div class="incio4">Politica de Privacidade</div>
-                          <div class="incio4">Termos e condições</div>
-                        </div>
-                        <div class="politica-de-privacidade-container">
-                          <div class="incio4">Politica de Privacidade</div>
-                          <div class="incio4">Termos e condições</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="social-icons-parent">
-                <img
-                  class="social-icons"
-                  alt=""
-                  src="./public/Social-Icons.svg"
-                />
 
-                <img
-                  class="social-icons2"
-                  alt=""
-                  src="./public/Social-Icons1.svg"
-                />
+                <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
+                    </div>
 
-                <img
-                  class="social-icons"
-                  alt=""
-                  src="./public/Social-Icons2.svg"
-                />
-              </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="seunome@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" class="form-control" placeholder="Digite o assunto que gostaria de tratar conosco" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" class="form-control" placeholder="Nos conte como podemos te ajudar..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark">Enviar Mensagem</button>
+                </form>
+
             </div>
-          </section>
-          <footer class="copyright-dividers-parent">
-            <div class="copyright-dividers">
-              <div class="copyright-dividers-child"></div>
-              <div class="copyright-dividers-item"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+   <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo-area-footer" id="logoLinkFooter">
+            <div class="logo-img">
+              <img src="../public/logoFooter.png" alt="Logo Argus Vision">
             </div>
-            <div class="argus-todos-os-direitos-rese-wrapper">
-              <div class="argus-todos3">
-                © 2026 ARGUS - Todos os Direitos Reservados | Termos e Condições
-                | Política de Privacidade
-              </div>
+            <span>ARGUS VISION</span>
+          </a>
+          <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
+          <div class="social-icons">
+            <div class="social-icon">
+              <a href="https://www.instagram.com/argus.vision.guia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="../public/icons/Vector7.svg" alt="Instagram">
+              </a>
             </div>
-          </footer>
+            <div class="social-icon">
+              <a href="https://github.com/ArgusVision-demoday" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="../public/icons/Vector8.svg" alt="GitHub">
+              </a>
+            </div>
+            <div class="social-icon">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="../public/icons/Vector9.svg" alt="Facebook">
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <nav class="footer-links" aria-label="Links institucionais">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Sobre.html">Sobre</a></li>
+            <li><a href="Produto.html">Produto</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-links" aria-label="Suporte">
+          <h4>Suporte</h4>
+          <ul>
+              <li><a href="Suporte.html">Fale conosco</a></li>
+              <li><a href="Suporte.html">Dúvidas Frequentes (FAQ)</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-links" aria-label="Legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos e condições</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 ARGUS VISION — Todos os Direitos Reservados | Termos e Condições | Política de Privacidade
+      </div>
     </div>
-
+  </footer>
+    <!-- JAVASCRIPT BÁSICO PARA MENU -->
     <script>
-      var incioText = document.getElementById("incioText");
-      if (incioText) {
-        incioText.addEventListener("click", function (e) {
-          window.location.href = "/";
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
         });
-      }
-      
-      var produtoText = document.getElementById("produtoText");
-      if (produtoText) {
-        produtoText.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var suporteText = document.getElementById("suporteText");
-      if (suporteText) {
-        suporteText.addEventListener("click", function (e) {
-          window.location.href = "./Suport.html";
-        });
-      }
-      
-      var personCircleIcon = document.getElementById("personCircleIcon");
-      if (personCircleIcon) {
-        personCircleIcon.addEventListener("click", function (e) {
-          window.location.href = "./Component.html";
-        });
-      }
-      
-      var rectangleButton = document.getElementById("rectangleButton");
-      if (rectangleButton) {
-        rectangleButton.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      
-      var produtoText2 = document.getElementById("produtoText2");
-      if (produtoText2) {
-        produtoText2.addEventListener("click", function (e) {
-          // Please sync "Product" to the project
-        });
-      }
-      </script>
-  </body>
+    </script>
+</body>
 </html>

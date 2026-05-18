@@ -1,137 +1,82 @@
-
 /* =========================================
-BOTÕES (Componentes)
-========================================= */
-.btn {
-display: inline-block;
-padding: 12px 28px;
-border-radius: 12px;
-font-weight: 600;
-font-size: 16px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;
-text-align: center;
-}
-
-.btn-orange {
-background-color: var(--primary-orange);
-color: var(--text-light);
-box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
-}
-.btn-orange:hover { background-color: #e05900; }
-
-.btn-blue {
-background-color: var(--primary-blue);
-color: var(--text-light);
-box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
-}
-.btn-blue:hover { background-color: #2563eb; }
-
-.btn-yellow {
-background-color: var(--primary-yellow);
-color: var(--secondary-blue);
-box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
-}
-.btn-yellow:hover { background-color: #eab308; }
-
-.btn-dark {
-background-color: var(--dark-blue);
-color: var(--text-light);
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-border-radius: 12px;
-padding: 10px 20px;
+    HERO SECTION (Específico Sobre)
+    ========================================= */
+/* AJUSTE: Modificadas as propriedades para funcionar corretamente com a tag <img> em vez de background */
+.hero {
 width: 100%;
-}
-.btn-dark:hover { background-color: #00174f; }
-
-/* === HERO SECTION === */
-.hero{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--text-light);
+height: auto;
+object-fit: cover;
+display: block;
 }
 
 .hero-section {
-    text-align: center;
-    padding: 80px 20px 40px;
+text-align: center;
+padding: 80px 20px 40px;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-orange);
-    margin-bottom: 20px;
+font-size: 2.5rem;
+color: var(--primary-orange);
+margin-bottom: 20px;
 }
 
 .hero-section h1 span { color: var(--dark-blue); }
 
 .hero-description {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.hero-image {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%); /* Força o elemento a quebrar o limite do .container */
-    margin-right: calc(-50vw + 50%);
-    max-width: 100vw;
-    display: block;
-    object-fit: cover;
+max-width: 800px;
+margin: 0 auto;
+font-size: 1.1rem;
+color: #555;
 }
 
 .elion-image {
-    max-width: 300px; /* Aumentado o tamanho do mascote (elion) */
-    width: 100%;
-    margin: 0 auto 30px auto;
+max-width: 300px;
+width: 100%;
+margin: 0 auto 30px auto;
 }
 
-/* === INFO CARDS (MISSÃO, VALORES, VISÃO) === */
+/* =========================================
+    INFO CARDS (MISSÃO, VALORES, VISÃO)
+    ========================================= */
 .info-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 0;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+padding: 40px 20px; /* AJUSTE: Adicionado padding horizontal de 20px para espaçamento no mobile */
+max-width: 1200px; /* AJUSTE: Contenção máxima igual ao global */
+margin: 0 auto;
 }
 
 .info-card {
-    padding: 30px;
-    border-radius: 12px;
-    color: white;
-    box-shadow: var(--shadow-md);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+padding: 30px;
+border-radius: 12px;
+color: white;
+box-shadow: var(--shadow-md);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
 }
-
 .info-card h3 { font-size: 1.5rem; }
 .info-card .icon-placeholder { width: 100px; height: 100px; border-radius: 50%; }
 
-/* === INOVAÇÃO & HORIZONTES === */
+/* =========================================
+    INOVAÇÃO & HORIZONTES
+    ========================================= */
 .innovation-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 40px 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+margin: 40px auto;
+padding: 0 20px; /* AJUSTE: Margens laterais para telas menores */
+max-width: 1200px;
 }
 
 .innovation-box, .horizon-box {
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
+padding: 40px;
+border-radius: 12px;
+box-shadow: var(--shadow-md);
 }
 
 .innovation-box { background-color: var(--primary-yellow); color: var(--text-dark); }
@@ -141,157 +86,212 @@ width: 100%;
 .horizon-box { background-color: var(--primary-blue); color: white; }
 .horizon-box h2 { font-size: 2rem; margin-bottom: 15px; }
 
-/* === ODS SECTION === */
+/* =========================================
+    ODS SECTION
+    ========================================= */
 .ods-section {
-          position: relative;
-          padding: 80px 0 280px; /* Preenchimento inferior maior para a cidade aparecer abaixo da onda */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          overflow: hidden; /* Garante que os fundos absolutos não vazem para os lados */
-          margin-top: 60px;
-          width: 100%; /* Garante que ocupe 100% da largura do monitor */
-      }
+    width: 100%;
+    margin: 60px 0; 
+    display: block;
+    }
 
-      /* Cidade fica por trás de tudo (z-index: 0) */
-      .ods-city-bg {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 65%; /* Altura para mostrar apenas os prédios aparecendo no final */
-          object-fit: cover;
-          object-position: bottom;
-          z-index: 0;
-      }
+    .ods-image-full {
+    width: 100%;
+    height: auto; 
+    display: block;
+    object-fit: contain; 
+}
 
-      /* Onda azul fica por cima da cidade cobrindo toda a seção de texto (z-index: 1) */
-      .ods-wave-bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%; 
-          object-fit: cover; 
-          object-position: center bottom; 
-          z-index: 1;
-      }
+/*
+.ods-city-bg {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: auto; 
+max-height: 65%;
+object-fit: cover;
+object-position: bottom;
+z-index: 0;
+}
 
-      /* Conteúdo textual fica no nível mais alto, sobre a onda (z-index: 2) */
-      .ods-content {
-          position: relative;
-          z-index: 2;
-          width: 100%;
-      }
+.ods-wave-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; 
+object-fit: cover; 
+object-position: center bottom; 
+z-index: 1;
+}
 
-      .ods-header {
-          text-align: center;
-          margin-bottom: 50px;
-      }
+.ods-content {
+position: relative;
+z-index: 2;
+width: 100%;
+max-width: 1200px;
+padding: 0 20px; 
+}
 
-      .ods-header h2 { font-size: 2.2rem; color: var(--primary-yellow); margin-bottom: 10px; }
-      .ods-header p { color: #ffffff; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+.ods-header {
+text-align: center;
+margin-bottom: 50px;
+}
+.ods-header h2 { font-size: 2.2rem; color: var(--primary-yellow); margin-bottom: 10px; }
+.ods-header p { color: #ffffff; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
 
-      .ods-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 40px;
-          width: 100%;
-      }
+.ods-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 40px;
+width: 100%;
+}
 
-      .ods-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-      }
+.ods-item {
+display: flex;
+align-items: flex-start;
+gap: 20px;
+}
 
-      .ods-image-placeholder {
-          width: 100px; /* Aumentado um pouco o tamanho dos ícones ODS */
-          height: 100px;
-          flex-shrink: 0;
-          background: transparent;
-      }
+.ods-image-placeholder {
+width: 100px; 
+height: 100px;
+flex-shrink: 0;
+background: transparent;
+}
 
-      .ods-image-placeholder img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-      }
+.ods-text h4 { color: var(--primary-yellow); font-size: 1.2rem; margin-bottom: 8px; font-weight: 700; }
+.ods-text p { color: #ffffff; font-size: 1rem; }
 
-      .ods-text h4 { color: var(--primary-yellow); font-size: 1.2rem; margin-bottom: 8px; font-weight: 700; }
-      .ods-text p { color: #ffffff; font-size: 1rem; }
-/* === TEAM SECTION === */
+*/
+/* =========================================
+    TEAM SECTION
+    ========================================= */
 .team-section {
-    padding: 60px 0 100px;
+padding: 60px 20px 100px; /* AJUSTE: Padding horizontal adicionado para responsividade */
 }
 
 .team-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--dark-blue);
-    margin-bottom: 50px;
+text-align: center;
+font-size: 2.5rem;
+color: var(--dark-blue);
+margin-bottom: 50px;
 }
 .team-title span { color: var(--primary-orange); }
 
 .team-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .team-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    width: 100%;
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+width: 100%;
 }
 
-/* Estrutura limpa do Card de Equipe (Baseado em Flex e Margem Negativa) */
 .team-card {
-    display: flex;
-    align-items: center;
-    width: 450px;
-    max-width: 100%;
+display: flex;
+align-items: center;
+width: 450px;
+max-width: 100%;
 }
 
 .team-photo {
-    width: 110px;
-    height: 110px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 2; /* Fica por cima do fundo colorido */
-    flex-shrink: 0;
+width: 110px;
+height: 110px;
+background-color: #fff;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+z-index: 2; 
+flex-shrink: 0;
+overflow: hidden; /* AJUSTE: Adicionado para cortar a borda da imagem se necessário */
+}
+
+.team-photo-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 .team-info {
-    flex: 1;
-    padding: 15px 20px 15px 30px; /* Padding extra na esquerda */
-    margin-left: -15px; /* Puxa o fundo colorido para debaixo da foto */
-    border-radius: 8px;
-    color: white;
-    z-index: 1;
-    box-shadow: var(--shadow-sm);
+flex: 1;
+padding: 15px 20px 15px 30px; 
+margin-left: -15px; 
+border-radius: 8px;
+color: white;
+z-index: 1;
+box-shadow: var(--shadow-sm);
 }
 
 .team-info h3 { font-size: 1.2rem; margin-bottom: 2px; }
 .team-info p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 10px; line-height: 1.2;}
 
+/* AJUSTE: Estilização da grid das redes sociais nos cards de equipe para igualar o PDF */
+.team-info .social-icons {
+display: flex;
+gap: 12px;
+margin-top: 8px;
+}
+.team-info .social-icons img {
+width: 20px;
+height: 20px;
+cursor: pointer;
+}
 
-/* === RESPONSIVIDADE === */
+ /* =========================================
+MEDIA QUERIES (Responsividade Integrada)
+========================================= */
 @media (max-width: 992px) {
-    .innovation-section { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
+.innovation-section { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Menu hamburguer iria aqui */
-    .hero-section h1 { font-size: 2rem; }
-    .team-title { text-align: center; }
-    .ods-header { text-align: left; }
-    .ods-header p { margin: 0; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .team-card { width: 100%; }
+.innovation-box h2, .horizon-box h2 { font-size: 1.6rem; }
+.innovation-box h3 { font-size: 1.1rem; }
+.innovation-box p, .horizon-box p { font-size: 0.95rem; }
+}
+
+@media (max-width: 600px) {
+.footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+.footer-brand .logo-area-footer {
+    justify-content: center;
+}
+
+.team-card {
+    flex-direction: column;
+    width: 100%;
+}
+
+.team-photo {
+    margin: 0 auto; 
+    z-index: 2;
+}
+
+.team-info {
+    margin-left: 0; 
+    margin-top: -20px; 
+    padding: 30px 20px 20px; 
+    text-align: center;
+    border-radius: 8px;
+}
+
+.team-info .social-icons {
+    justify-content: center; 
+}
+
+/* AJUSTE: Redução extra de texto para telas muito pequenas (celulares em pé) */
+.team-info h3 { font-size: 1.1rem; }
+.team-info p { font-size: 0.8rem; }
+.footer-brand p { font-size: 0.8rem; }
 }
