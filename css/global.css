@@ -180,8 +180,46 @@ img {
   align-items: center;
 }
 
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
 .nav-links a:hover {
   color: var(--primary-blue);
+}
+
+/* Barrinha */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 3px;
+
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* Animação da barrinha */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Página ativa */
+.nav-links a.active {
+  color: var(--primary-blue);
+}
+
+/* Mantém barrinha ativa */
+.nav-links a.active::after {
+  width: 100%;
 }
 
 .user-actions {
