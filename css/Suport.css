@@ -1,56 +1,77 @@
 /* =========================================
            TIPOGRAFIA E TÍTULOS
            ========================================= */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-orange);
-            margin: 3rem 0 3rem;
-        }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin: 3rem 0 3rem;
+}
 
-        .section-title.blue { color: var(--secondary-blue); }
-        .section-title.dark { color: var(--dark-blue); }
+.section-title.blue {
+    color: var(--secondary-blue);
+}
+
+.section-title.dark {
+    color: var(--dark-blue);
+}
 
 /* =========================================
     SEÇÕES
     ========================================= */
 .section {
-    padding: rem 0;
+    padding: 4rem 0;
 }
 
- .hero-support {
+.hero-support {
     padding: 3rem 0;
 }
 
 .hero-card {
-    position: relative; /* Fundamental para segurar a imagem absoluta */
+    position: relative;
+    /* Fundamental para segurar a imagem absoluta */
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     min-height: 716px;
     display: flex;
     align-items: center;
     margin-top: 3rem;
-   }
+}
 
 /* Imagem de Fundo Absolute */
 .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background: linear-gradient(90deg,
+            rgba(0, 32, 96, 0.85) 0%,
+            rgba(0, 32, 96, 0.65) 45%,
+            rgba(0, 32, 96, 0.15) 100%);
 }
 
 /* Conteúdo do Hero (Textos) */
 .hero-content {
     position: relative;
-    z-index: 2; /* Fica acima da máscara e da imagem */
+    z-index: 3;
+    /* Fica acima da máscara e da imagem */
     padding: 4rem;
     color: var(--text-light);
-    max-width: 55%; /* Limita a largura do texto para não cobrir o rosto da moça */
+    max-width: 55%;
+    /* Limita a largura do texto para não cobrir o rosto da moça */
 }
 
 .hero-content h1 {
@@ -64,6 +85,7 @@
     opacity: 0.95;
     line-height: 1.5;
 }
+
 /* DECORATIVE DOTS */
 .hero-dots {
     position: absolute;
@@ -85,15 +107,21 @@
 
 .guia-card {
     display: flex;
-    border-radius: var(--border-radius-lg);
+    /* border-radius: var(--border-radius-lg); */
+    border-radius: 16px;
     overflow: hidden;
     color: var(--text-light);
     box-shadow: var(--shadow-md);
     height: 250px;
 }
 
-.guia-card.orange { background-color: var(--primary-orange); }
-.guia-card.darkblue { background-color: var(--secondary-blue); }
+.guia-card.orange {
+    background-color: var(--primary-orange);
+}
+
+.guia-card.darkblue {
+    background-color: var(--secondary-blue);
+}
 
 .guia-img {
     width: 45%;
@@ -214,84 +242,84 @@
     DOWNLOAD APP SECTION
     ========================================= */
 .download-app {
-  background-color: var(--primary-yellow);
-  padding: 10px 0;
-  border-radius: 20px;
-  margin: 6rem auto;
-  max-width: 1100px;
+    background-color: var(--primary-yellow);
+    padding: 10px 0;
+    border-radius: 20px;
+    margin: 6rem auto;
+    max-width: 1100px;
 }
 
 .download-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
 }
 
 .download-text {
-  flex: 1;
+    flex: 1;
 }
 
 .download-text h2 {
-  color: var(--secondary-blue);
-  font-size: 40px;
-  margin-bottom: 10px;
+    color: var(--secondary-blue);
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .download-text h3 {
-  color: var(--secondary-blue);
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 500;
+    color: var(--secondary-blue);
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .download-text p {
-  color: var(--text-dark);
-  margin-bottom: 30px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
 }
 
 .store-buttons {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .store-buttons .btn-dark {
-  padding: 10px 20px;
-  width: auto;
-  min-width: 180px;
+    padding: 10px 20px;
+    width: auto;
+    min-width: 180px;
 }
 
 .store-buttons p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
-  font-size: 16px;
-  color: var(--bg-light);
-  font-family: var(--font-main);
-  font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 16px;
+    color: var(--bg-light);
+    font-family: var(--font-main);
+    font-weight: 600;
 }
 
 .store-buttons img {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .app-mockup {
-  width: 100%;
-  max-width: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .app-mockup img {
-  max-height: 500px;
+    max-height: 500px;
 }
 
 
@@ -398,26 +426,85 @@ textarea.form-control {
     margin-top: 1rem;
     border-radius: 8px;
 }
-  /* =========================================
+
+/* =========================================
     RESPONSIVIDADE
     ========================================= */
 @media (max-width: 992px) {
-    .contact-grid { grid-template-columns: 1fr; }
-    .hero-content { max-width: 80%; padding: 3rem 2rem; }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        max-width: 80%;
+        padding: 3rem 2rem;
+    }
+
     /* Apenas de segurança caso o overlay tenha sido injetado via JS em algum momento */
-    .hero-overlay { background: linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.8) 70%, rgba(255,255,255,0) 100%); }
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.8) 70%, rgba(255, 255, 255, 0) 100%);
+    }
 }
 
 @media (max-width: 768px) {
-  .hero-card { min-height: 450px; margin-top: 1rem; }
-  .hero-content { max-width: 100%; text-align: center; padding: 2rem 1.5rem; }
-  .hero-overlay { background: linear-gradient(180deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.6) 100%); }
-  .hero-content h1 { font-size: 2.2rem; }
-  
-  .guia-grid { grid-template-columns: 1fr; }
-  .guia-card { flex-direction: column; height: auto; }
-  .guia-img { width: 100%; height: 200px; }
-  .guia-text { width: 100%; text-align: center; justify-content: center; padding: 1.5rem;}
-  
-  .contact-form { padding: 2rem 1.5rem; margin-bottom: 2rem; }
+
+    .hero-card {
+        min-height: 420px;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg,
+                rgba(0, 32, 96, 0.9) 0%,
+                rgba(0, 32, 96, 0.7) 100%);
+    }
+
+    .hero-support {
+        margin-top: 1rem;
+    }
+
+    /* GUIA DE USO */
+    .guia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guia-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .guia-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .guia-text {
+        width: 100%;
+        padding: 1.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .guia-text h3 {
+        font-size: 1.1rem;
+    }
 }
