@@ -37,7 +37,10 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-function sendMessage() {
+const API_URL =
+    "https://localhost:7283/api/chat";
+
+async function sendMessage() {
 
     const text = chatInput.value.trim();
 
@@ -56,8 +59,19 @@ function sendMessage() {
     // Scroll para baixo
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Resposta automática do Elion
-    setTimeout(() => {
+    try {
+
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                mensagem: text
+            })
+        });
+
+        const data = await response.json();
 
         const messageRow = document.createElement("div");
         messageRow.classList.add("message-row");
@@ -70,8 +84,7 @@ function sendMessage() {
         const botMessage = document.createElement("div");
         botMessage.classList.add("bot-message");
 
-        botMessage.textContent =
-            "Recebi sua mensagem! Em breve poderei responder automaticamente.";
+        botMessage.textContent = data.resposta;
 
         messageRow.appendChild(avatar);
         messageRow.appendChild(botMessage);
@@ -80,5 +93,18 @@ function sendMessage() {
 
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    }, 1000);
+    }
+    catch (error) {
+
+        console.error(error);
+
+        const errorMessage = document.createElement("div");
+
+        errorMessage.classList.add("bot-message");
+
+        errorMessage.textContent =
+            "Erro ao conectar com o Elion.";
+
+        chatMessages.appendChild(errorMessage);
+    }
 }
