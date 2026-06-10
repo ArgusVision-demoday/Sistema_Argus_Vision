@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../css/chatbot.css">
     <link rel="shortcut icon" href="../public/logo.png" type="image/x-icon">
 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js" integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.css" integrity="sha512-UiKdzM5DL+I+2YFxK+7TDedVyVm7HMp/bN85NeWMJNYortoll+Nd6PU9ZDrZiaOsdarOyk9egQm6LOJZi36L2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
 </head>
 <body>
 
@@ -188,7 +193,8 @@
                             </div>
                             <div>
                                 <h4>Email Suporte</h4>
-                                <span>suporte@argus.com</span>
+                                <span>argusvisionguia@gmail.com</span>
+
                             </div>
                         </div>
 
@@ -204,29 +210,30 @@
                     </div>
                 </div>
 
-                <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                <form class="contact-form" method="POST" id="contactForm">
                     <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Digite seu nome completo" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="seunome@gmail.com" required>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="seunome@gmail.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" class="form-control" placeholder="Digite o assunto que gostaria de tratar conosco" required>
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Digite o assunto que gostaria de tratar conosco" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" class="form-control" placeholder="Nos conte como podemos te ajudar..." required></textarea>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" class="form-control" name="message" placeholder="Nos conte como podemos te ajudar..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-dark">Enviar Mensagem</button>
+                    <button type="submit" class="btn btn-dark" id="submitButton">Enviar Mensagem</button>
                 </form>
+
 
             </div>
         </section>
@@ -371,10 +378,6 @@ dots.forEach(dot => {
   });
 });
 
-
-
-</script>
-
     <!-- JAVASCRIPT BÁSICO PARA MENU -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -384,6 +387,53 @@ dots.forEach(dot => {
             menuToggle.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
             });
+        });
+
+         emailjs.init("4trm4XpnvqZDT0qZH");
+
+       document.getElementById("contactForm").addEventListener("submit",function(event){
+        event.preventDefault(); // Impede recarregamento da página
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        } 
+
+        const serviceID = "service_87xklvl";
+        const tamplateID ="template_mkbe47f";
+        
+        const submitButton = document.getElementById('submitButton');
+        
+        submitButton.textContent = "Enviando...";
+        submitButton.disabled = true;
+
+        emailjs.send(serviceID, tamplateID, formData).then(()=>{
+                Toastify({
+                    text: "E-mail enviado com sucesso",
+                    duration: 4000,
+                    style:{
+                        background: "linear-gradient(45deg, #b06ab3, #4568dc)",
+                        color: "#fffff"
+                    }
+                }).showToast();
+
+                document.getElementById("contactForm").reset();
+            }).catch((error)=>{
+                Toastify({
+                    text: "Erro ao tentar enviar e-mail",
+                    duration: 4000,
+                    style:{
+                        background: "#b06ab3",
+                        color: "#fffff"
+                    }
+                }).showToast();
+
+            }).finally(()=>{
+                submitButton.textContent = "Enviar email";
+                submitButton.disabled = false;
+            }) 
         });
     </script>
 
