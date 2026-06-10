@@ -3,7 +3,8 @@ import './Login.css'
 
 export default function Cadastro() {
   return (
-    <div className="login-container" id="mainContent">
+    <div className="login-page" id="mainContent">
+    <div className="login-container">
       <section className="login-form-area">
         <div className="form-wrapper">
           <Link to="/" className="btn-back">← Voltar</Link>
@@ -66,6 +67,7 @@ export default function Cadastro() {
           </div>
         </div>
       </aside>
+    </div>
     </div>
   )
 }

@@ -2,23 +2,25 @@ import { useState, useEffect, useCallback } from 'react'
 
 export default function AccessibilityPanel() {
   const [open, setOpen] = useState(false)
-  const [fontSize, setFontSize] = useState(() => localStorage.getItem('fontSize') || 'normal')
-  const [highContrast, setHighContrast] = useState(() => localStorage.getItem('highContrast') === 'true')
-  const [reduceMotion, setReduceMotion] = useState(() => localStorage.getItem('reduceMotion') === 'true')
+  const [fontSize, setFontSize] = useState(() => localStorage.getItem('av_fontSize') || 'normal')
+  const [highContrast, setHighContrast] = useState(() => localStorage.getItem('av_highContrast') === 'true')
+  const [reduceMotion, setReduceMotion] = useState(() => localStorage.getItem('av_reduceMotion') === 'true')
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-font-size', fontSize)
-    localStorage.setItem('fontSize', fontSize)
+    document.body.classList.remove('font-small', 'font-large')
+    if (fontSize === 'small') document.body.classList.add('font-small')
+    if (fontSize === 'large') document.body.classList.add('font-large')
+    localStorage.setItem('av_fontSize', fontSize)
   }, [fontSize])
 
   useEffect(() => {
-    document.documentElement.classList.toggle('high-contrast', highContrast)
-    localStorage.setItem('highContrast', highContrast)
+    document.body.classList.toggle('high-contrast', highContrast)
+    localStorage.setItem('av_highContrast', highContrast)
   }, [highContrast])
 
   useEffect(() => {
-    document.documentElement.classList.toggle('reduce-motion', reduceMotion)
-    localStorage.setItem('reduceMotion', reduceMotion)
+    document.body.classList.toggle('reduce-motion', reduceMotion)
+    localStorage.setItem('av_reduceMotion', reduceMotion)
   }, [reduceMotion])
 
   const handleReset = () => {
@@ -47,13 +49,12 @@ export default function AccessibilityPanel() {
         onClick={() => setOpen(prev => !prev)}
       />
       <div
-        className="accessibility-panel"
+        className={`accessibility-panel${open ? ' open' : ''}`}
         id="accessibilityPanel"
         role="dialog"
         aria-modal="true"
         aria-hidden={!open}
         aria-label="Preferências de acessibilidade"
-        style={{ display: open ? 'block' : 'none' }}
       >
         <div className="accessibility-panel-header">
           <h2>Preferências de acessibilidade</h2>

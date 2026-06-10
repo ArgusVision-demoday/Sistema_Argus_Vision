@@ -86,8 +86,12 @@
 /* =========================================
    1. HERO
    ========================================= */
-.hero {
+.page-produto .hero {
   padding: 70px 0 80px;
+  background-image: none;
+  min-height: auto;
+  display: block;
+  color: var(--text-dark);
 }
 
 .hero__grid {

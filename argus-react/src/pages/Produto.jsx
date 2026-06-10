@@ -12,7 +12,7 @@ export default function Produto() {
   const [mainImg, setMainImg] = useState(thumbs[0])
 
   return (
-    <main id="mainContent">
+    <main id="mainContent" className="page-produto">
       {/* Hero */}
       <section id="inicio" className="hero">
         <div className="container hero__grid">

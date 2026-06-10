@@ -64,14 +64,12 @@
 }
 
 /* Conteúdo do Hero (Textos) */
-.hero-content {
+.hero-support .hero-content {
     position: relative;
     z-index: 3;
-    /* Fica acima da máscara e da imagem */
     padding: 4rem;
     color: var(--text-light);
     max-width: 55%;
-    /* Limita a largura do texto para não cobrir o rosto da moça */
 }
 
 .hero-content h1 {
@@ -435,7 +433,7 @@ textarea.form-control {
         grid-template-columns: 1fr;
     }
 
-    .hero-content {
+    .hero-support .hero-content {
         max-width: 80%;
         padding: 3rem 2rem;
     }
@@ -453,7 +451,7 @@ textarea.form-control {
         align-items: flex-start;
     }
 
-    .hero-content {
+    .hero-support .hero-content {
         max-width: 100%;
         width: 100%;
         text-align: center;
