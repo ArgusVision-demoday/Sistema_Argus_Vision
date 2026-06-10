@@ -30,7 +30,7 @@
 
 /* Badge flutuante "Mais Popular" no card Pro */
 .badge--pop {
-  background-color: var(--primary-orange);
+  background-color: var(--primary-yellow);
   color: #fff;
   position: absolute;
   top: 18px;
@@ -513,7 +513,7 @@
    6. CTA FINAL
    ========================================= */
 .cta {
-  padding: 64px 0;
+  padding: 64px;
   border-radius: var(--border-radius);
   margin: 50px;
 }

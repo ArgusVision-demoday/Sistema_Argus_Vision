@@ -1,3 +1,8 @@
+main {
+  padding: 0 20px; /* margem lateral geral da página */
+}
+
+
 /* =========================================
            TIPOGRAFIA E TÍTULOS
            ========================================= */
@@ -97,55 +102,86 @@
     background-image: radial-gradient(var(--primary-blue) 2px, transparent 2px);
     background-size: 15px 15px;
 }
-
 /* GUIA DE USO */
+.card-hover:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+
+.carrossel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .guia-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  display: flex;
+  gap: 20px; /* espaço entre cards */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.guia-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .guia-card {
-    display: flex;
-    /* border-radius: var(--border-radius-lg); */
-    border-radius: 16px;
-    overflow: hidden;
-    color: var(--text-light);
-    box-shadow: var(--shadow-md);
-    height: 250px;
+  flex: 0 0 50%; /* desktop: metade da largura */
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--text-light);
+  display: flex;
 }
 
-.guia-card.orange {
-    background-color: var(--primary-orange);
-}
-
-.guia-card.darkblue {
-    background-color: var(--secondary-blue);
-}
 
 .guia-img {
-    width: 45%;
-    background-color: var(--bg-white);
+  width: 50%; /* metade do card */
+  background-color: var(--bg-white);
 }
 
 .guia-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* mantém proporção */
+  margin: 5px; /* espaço interno */
+  border-radius: 10px;
 }
+
+
+
 
 .guia-text {
-    width: 55%;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
+  width: 45%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
 
-.guia-text h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.4;
+/* setas laterais no desktop */
+/* setas fora do card, quadradas arredondadas */
+.carrossel-indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 8px;
 }
+
+.carrossel-indicadores .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrossel-indicadores .dot.active {
+  background-color: var(--secondary-blue);
+}
+
+
 
 /* FAQ */
 .faq-section {
@@ -178,6 +214,25 @@
     color: var(--text-muted);
     font-size: 0.95rem;
 }
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #f9f9f9;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--secondary-blue);
+}
+
+details[open] {
+  background: #eef6ff; /* muda cor quando aberto */
+}
+
 
 /* DOWNLOAD APP */
 .app-section .container {
@@ -242,86 +297,88 @@
     DOWNLOAD APP SECTION
     ========================================= */
 .download-app {
-    background-color: var(--primary-yellow);
-    padding: 10px 0;
-    border-radius: 20px;
-    margin: 6rem auto;
-    max-width: 1100px;
+  background-color: var(--primary-yellow);
+  padding: 20px 0;
+  border-radius: 20px;
+  margin: 6rem auto;
+  max-width: 1100px;
 }
 
 .download-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
 }
 
 .download-text {
-    flex: 1;
+  flex: 1;
+  padding-left: 20px;
 }
 
 .download-text h2 {
-    color: var(--secondary-blue);
-    font-size: 40px;
-    margin-bottom: 10px;
+  color: var(--secondary-blue);
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .download-text h3 {
-    color: var(--secondary-blue);
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: 500;
+  color: var(--secondary-blue);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .download-text p {
-    color: var(--text-dark);
-    margin-bottom: 30px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
 }
 
 .store-buttons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .store-buttons .btn-dark {
-    padding: 10px 20px;
-    width: auto;
-    min-width: 180px;
+  padding: 10px 20px;
+  width: auto;
+  min-width: 180px;
 }
 
 .store-buttons p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-    font-size: 16px;
-    color: var(--bg-light);
-    font-family: var(--font-main);
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 16px;
+  color: var(--bg-light);
+  font-family: var(--font-main);
+  font-weight: 600;
 }
 
 .store-buttons img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .app-mockup {
-    width: 100%;
-    max-width: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 700px; /* aumente o limite do container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .app-mockup img {
-    max-height: 500px;
+  max-width: none; /* remove limite */
+  width: 120%;     /* cresce além do container */
+  padding-left: 20px;
 }
-
 
 /* CONTATO */
 .contact-grid {
@@ -427,9 +484,32 @@ textarea.form-control {
     border-radius: 8px;
 }
 
+  .carrossel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  .guia-card {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    text-align: center;
+  }
+  button {
+    margin: 10px;
+    cursor: pointer;
+  }
+
 /* =========================================
     RESPONSIVIDADE
     ========================================= */
+
+@media (max-width: 1024px) {
+  .guia-card {
+    flex: 0 0 70%; /* tablets: ocupa 70% */
+  }
+
+}
+
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -482,29 +562,29 @@ textarea.form-control {
         margin-top: 1rem;
     }
 
-    /* GUIA DE USO */
-    .guia-grid {
-        grid-template-columns: 1fr;
-    }
-
     .guia-card {
-        flex-direction: column;
-        height: auto;
-    }
+    flex: 0 0 auto;        /* não força largura fixa */
+    margin: 0 auto;        /* centraliza o card */
+    max-width: 350px;      /* limite menor */
+    width: 100%;           /* ocupa toda a largura até o limite */
+  }
 
-    .guia-img {
-        width: 100%;
-        height: 220px;
-    }
+  .guia-img {
+    width: 100%; /* imagem ocupa toda a largura */
+  }
 
-    .guia-text {
-        width: 100%;
-        padding: 1.5rem;
-        text-align: center;
-        justify-content: center;
-    }
+  .guia-text {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.8rem; /* menor no celular (≈13px) */
+    line-height: 1.4;
+    text-align: center;
+  }
 
-    .guia-text h3 {
-        font-size: 1.1rem;
-    }
+}
+
+@media (max-width: 568px) {
+  .guia-text {
+    font-size: 0.5 rem; /* ainda menor (≈11px) */
+  }
 }

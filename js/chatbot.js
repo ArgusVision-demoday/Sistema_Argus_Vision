@@ -9,6 +9,15 @@ const chatMessages = document.getElementById("chatMessages");
 const API_URL =
     "https://argusvision-api.onrender.com/api/chat";
 
+
+const btnElion = document.getElementById("btnElion");
+
+// Abrir chatbot pelo botão "Falar com Elion"
+btnElion.addEventListener("click", () => {
+    chatWindow.classList.toggle("active");
+});
+
+
 // Abrir e fechar chatbot pelo mascote
 chatToggle.addEventListener("click", () => {
     chatWindow.classList.toggle("active");

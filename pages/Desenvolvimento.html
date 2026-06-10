@@ -25,9 +25,9 @@
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="../index.html" id="navInicio">Início</a></li>
-          <li><a href="#" id="navSobre">Sobre</a></li>
-          <li><a href="#" id="navProduto">Produto</a></li>
-          <li><a href="#" id="navSuporte">Suporte</a></li>
+          <li><a href="./Sobre.html" id="navSobre">Sobre</a></li>
+          <li><a href="./Produto.html" id="navProduto">Produto</a></li>
+          <li><a href="./Suporte.html" id="navSuporte">Suporte</a></li>
           <li class="mobile-only-btn" style="display: none;">
             <button class="btn btn-blue" style="width: 100%"><a href="./Cadastro.html">Cadastre-se</a></button></li>
         </ul>
@@ -68,53 +68,81 @@
 
     <!-- FOOTER (Idêntico ao das outras páginas) -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo-area-footer">
-                        <div class="logo-img">
-                            <img src="../public/logoFooter.png" alt="Logo">
-                        </div>
-                        <span>ARGUS VISION</span>
-                    </a>
-                    <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
-                    <div class="social-icons">
-                        <div class="social-icon"><img src="../public/icons/Vector7.svg" alt="Instagram"></div>
-                        <div class="social-icon"><img src="../public/icons/Vector8.svg" alt="GitHub"></div>
-                        <div class="social-icon"><img src="../public/icons/Vector9.svg" alt="Facebook"></div>
-                    </div>
-                </div>
+    <div class="container">
+      <div class="footer-grid">
 
-                <div class="footer-links">
-                    <h4>Institucional</h4>
-                    <ul>
-                        <li>Início</li>
-                        <li>Sobre</li>
-                        <li>Produto</li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li>Fale conosco</li>
-                        <li>FAQ</li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li>Política de Privacidade</li>
-                        <li>Termos</li>
-                    </ul>
-                </div>
+        <div class="footer-brand">
+          <a href="index.html" class="logo-area-footer" id="logoLinkFooter">
+            <div class="logo-img">
+              <img src="../public/logoFooter.png" alt="Logo Argus Vision">
             </div>
-            <div class="footer-bottom">
-                &copy; 2026  ARGUS VISION - Todos os Direitos Reservados
-            </div>
+            <span>ARGUS VISION</span>
+          </a>
+          <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
+          <div class="social-icons">
+            <div class="social-icon"><a href="https://www.instagram.com/argus.vision/" target="_blank"><img
+                  src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
+            <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img
+                  src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
+            <div class="social-icon"><a href="https://www.linkedin.com/in/argus-vision-54529a412/?isSelfProfile=false" target="_blank"><img
+                  src="../public/icons/Vector9.svg" alt="Linkedin"></a></div>
+          </div>
         </div>
-    </footer>
+
+        <nav class="footer-links" aria-label="Links institucionais">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="Sobre.html">Sobre</a></li>
+            <li><a href="Produto.html">Produto</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-links" aria-label="Suporte">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="Suporte.html">Fale conosco</a></li>
+            <li><a href="Suporte.html">Dúvidas Frequentes (FAQ)</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-links" aria-label="Legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos e condições</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 ARGUS VISION — Todos os Direitos Reservados
+      </div>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.SiennaAccessibility) {
+      new window.SiennaAccessibility.Widget();
+    }
+  });
+</script>
+
 
     <script>
     // Configuração do Menu Mobile

@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="../css/sobre.css" />
     <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/chatbot.css">
     <link rel="shortcut icon" href="../public/logo.png" type="image/x-icon">
 
     <title>Sobre - Argus Vision</title>
@@ -276,10 +277,13 @@
                   </a>
                     <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
                     <div class="social-icons">
-                        <div class="social-icon"><a href="https://www.instagram.com/argus.vision.guia/" target="_blank"><img src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
-                        <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
-                        <div class="social-icon"><a href="https://www.facebook.com/" target="_blank"><img src="../public/icons/Vector9.svg" alt="Facebook"></a></div>
-                    </div>
+            <div class="social-icon"><a href="https://www.instagram.com/argus.vision/" target="_blank"><img
+                  src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
+            <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img
+                  src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
+            <div class="social-icon"><a href="https://www.linkedin.com/in/argus-vision-54529a412/?isSelfProfile=false" target="_blank"><img
+                  src="../public/icons/Vector9.svg" alt="Linkedin"></a></div>
+          </div>
                 </div>
 
                 <div class="footer-links">
@@ -309,10 +313,74 @@
             </div>
 
             <div class="footer-bottom">
-                &copy; 2026 ARGUS VISION - Todos os Direitos Reservados | Termos e Condições | Política de Privacidade
+                &copy; 2026 ARGUS VISION - Todos os Direitos Reservados
             </div>
         </div>
     </footer>
+
+    <div class="chatbot-container">
+
+    <button id="chatToggle" class="chatbot-button" aria-label="Abrir assistente virtual Elion">
+      <img src="../public/chatbot/elion-avatar.png" alt="Elion">
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+
+      <div class="chat-header">
+        <span>Converse com o Elion</span>
+        <button id="closeChat">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="message-row">
+
+          <img src="../public/chatbot/elion-avatar.png" class="message-avatar" alt="Elion">
+
+          <div class="bot-message">
+            Olá, tudo bem?<br>
+            Sou o Elion, seu cão-guia digital.<br>
+            Como posso ajudar você?
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="chat-input">
+
+        <input id="chatInput" type="text" placeholder="Digite sua dúvida..." aria-label="Digite sua dúvida">
+
+        <button id="sendButton">
+          Enviar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.SiennaAccessibility) {
+      new window.SiennaAccessibility.Widget();
+    }
+  });
+</script>
+
 
 <!-- LINK DO BOOTSTRAP CORRIGIDO (JAVASCRIPT) -->
     <script>
@@ -438,6 +506,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   </script>
 
-
+  <script src="../js/chatbot.js"></script> 
 </body>
 </html>
