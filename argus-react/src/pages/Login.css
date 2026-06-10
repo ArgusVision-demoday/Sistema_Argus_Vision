@@ -1,0 +1,407 @@
+/* --- Reset e Bases --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F7FE;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Container Principal --- */
+.login-container {
+    display: flex;
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 700px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Lado Esquerdo (Hero) --- */
+.login-hero {
+    flex: 0.9;
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+}
+
+.login-logo {
+    width: 65px;
+}
+
+.hero-title {
+    font-size: 38px;
+    line-height: 1.1;
+    margin-top: 40px;
+    font-weight: 700;
+}
+
+.highlight-orange {
+    color: #FF7A1B;
+}
+
+.highlight-yellow {
+    color: #FFD21B;
+}
+
+.highlight-blue {
+    color: #234296;
+}
+
+.hero-subtitle {
+    margin-top: 15px;
+    font-size: 14px;
+    max-width: 320px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.testimonial-bubble {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.testimonial-bubble p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* --- Lado Direito (Formulário) --- */
+.login-form-area {
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-back {
+    display: block;
+    text-decoration: none;
+    color: #A3AED0;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.welcome-text {
+    color: #FF7A1B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-title {
+    font-size: 42px;
+    color: #2B3674;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* --- Social Login --- */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login p {
+    text-align: center;
+    font-size: 14px;
+    color: #2B3674;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #E0E5F2;
+    background: #FFF;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #2B3674;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+}
+
+.btn-social img {
+    width: 18px;
+}
+
+/* --- Divider --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2B3674;
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E0E5F2;
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #707EAE;
+}
+
+/* --- Inputs --- */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #2B3674;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    background-color: #FFCC19;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 48px;
+}
+
+.input-field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: #2B3674;
+    font-size: 14px;
+}
+
+.input-field i {
+    color: #2B3674;
+    font-size: 18px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #A3AED0;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* --- Botão --- */
+.btn-enter {
+    width: 70%;
+    margin: 30px auto 0;
+    display: block;
+    padding: 14px;
+    background: #FF7A1B;
+    color: #FFF;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enter:hover {
+    transform: translateY(-2px);
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #A3AED0;
+}
+
+.signup-text a {
+    color: #FF7A1B;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+ /* --- Responsividade --- */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+
+    .login-container {
+        max-width: 900px;
+        margin: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .login-form-area {
+        padding: 30px;
+    }
+
+    .login-title {
+        font-size: 36px;
+    }
+}
+
+
+/* MOBILE E TABLETS PEQUENOS */
+@media (max-width: 992px) {
+
+     body {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* mantém centralização vertical */
+    }
+
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        margin: 20px;
+    }
+
+    /* ESCONDE O HERO */
+    .login-hero {
+        display: none !important;
+        min-height: auto;
+    }
+
+    /* FORMULÁRIO OCUPA TUDO */
+    .login-form-area {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        max-width: 100%px;
+        margin: 0 auto;
+    }
+
+    .login-title {
+        font-size: 32px;
+    }
+
+    .btn-enter {
+        width: 100%;
+    }
+}
+
+
+/* CELULARES */
+@media (max-width: 480px) {
+
+    .login-container {
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .login-form-area {
+        padding: 30px 18px;
+    }
+
+    .login-title {
+        font-size: 26px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-social {
+        width: 100%;
+    }
+
+    .input-field {
+        height: 50px;
+    }
+
+    .btn-enter {
+        padding: 16px;
+        font-size: 15px;
+    }
+}
