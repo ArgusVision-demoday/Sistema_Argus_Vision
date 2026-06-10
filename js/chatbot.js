@@ -6,6 +6,9 @@ const sendButton = document.getElementById("sendButton");
 const chatInput = document.getElementById("chatInput");
 const chatMessages = document.getElementById("chatMessages");
 
+const API_URL =
+    "https://argusvision-api.onrender.com/api/chat";
+
 // Abrir e fechar chatbot pelo mascote
 chatToggle.addEventListener("click", () => {
     chatWindow.classList.toggle("active");
@@ -26,19 +29,12 @@ chatInput.addEventListener("keydown", (event) => {
     }
 });
 
-// Fechar o chatbot usando o Esc
-closeChat.addEventListener("click", () => {
-    chatWindow.classList.remove("active");
-});
-
+// Fechar chatbot usando ESC
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
         chatWindow.classList.remove("active");
     }
 });
-
-const API_URL =
-    "https://localhost:7283/api/chat";
 
 async function sendMessage() {
 
@@ -56,7 +52,18 @@ async function sendMessage() {
     // Limpa input
     chatInput.value = "";
 
-    // Scroll para baixo
+    // Scroll
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Indicador de digitação
+    const typingMessage = document.createElement("div");
+
+    typingMessage.classList.add("bot-message");
+
+    typingMessage.textContent = "Elion está digitando...";
+
+    chatMessages.appendChild(typingMessage);
+
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
     try {
@@ -71,7 +78,14 @@ async function sendMessage() {
             })
         });
 
+        if (!response.ok) {
+            throw new Error(`Erro HTTP ${response.status}`);
+        }
+
         const data = await response.json();
+
+        // Remove o indicador de digitação
+        typingMessage.remove();
 
         const messageRow = document.createElement("div");
         messageRow.classList.add("message-row");
@@ -92,19 +106,23 @@ async function sendMessage() {
         chatMessages.appendChild(messageRow);
 
         chatMessages.scrollTop = chatMessages.scrollHeight;
-
     }
     catch (error) {
 
         console.error(error);
+
+        // Remove o indicador de digitação
+        typingMessage.remove();
 
         const errorMessage = document.createElement("div");
 
         errorMessage.classList.add("bot-message");
 
         errorMessage.textContent =
-            "Erro ao conectar com o Elion.";
+            "Desculpe, não consegui me conectar ao servidor do Elion.";
 
         chatMessages.appendChild(errorMessage);
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 }
