@@ -1,0 +1,715 @@
+/* =========================================
+    HERO SECTION
+    ========================================= */
+.hero {
+  background-image: url(../public/pageHome/hero2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 40px 20px;
+}
+
+.hero-image {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  max-width: 100vw;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-orange);
+  z-index: 1;
+}
+
+.hero-content p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  z-index: 1;
+}
+
+/* =========================================
+    ARGUS GUIDE SECTION
+    ========================================= */
+.argus-guide {
+  padding: 80px 0;
+}
+
+.guide-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.guide-text {
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--primary-yellow);
+  color: var(--secondary-blue);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.guide-text h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--secondary-blue);
+}
+
+.guide-text h2 span {
+  color: var(--primary-orange);
+}
+
+.guide-text p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.guide-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 400px;
+}
+
+/* =========================================
+    FEATURES SECTION
+    ========================================= */
+.features {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features-header {
+  font-size: 32px;
+  color: var(--secondary-blue);
+  margin-bottom: 50px;
+}
+
+.features-header span {
+  color: var(--primary-orange);
+}
+
+/* Ajuste: Garante que o texto tenha espaço nos cards com E sem imagem */
+.features-content, 
+.feature-card:not(.bg-yellow):not(.bg-orange) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 30px; /* Aumentei o padding para o texto não bater na borda */
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 25px; /* Aumentei um pouco o espaço entre os cards */
+}
+
+.feature-card {
+  display: flex;
+  position: relative;
+  border-radius: var(--border-radius);
+  text-align: left;
+  color: #ffffff; /* Forçando branco para leitura no azul/laranja */
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  min-height: 280px;
+}
+
+/* Ajuste cores específicas para bater com a imagem */
+.bg-yellow { background-color: #FFCE1B; color: #234296 !important; }
+.bg-darkblue { background-color: #234296; }
+.bg-orange { background-color: #FF7A1B; }
+.bg-lightblue { background-color: #4A90E2; }
+
+/* Ajuste específico para o Card Laranja e Amarelo */
+.feature-card.bg-yellow, 
+.feature-card.bg-orange {
+  display: flex;
+  flex-direction: row; /* Coloca imagem e texto lado a lado */
+  padding: 0 !important; /* Garante que a imagem encoste na borda */
+}
+
+/* Inverte a ordem no laranja para a imagem ficar na esquerda */
+.feature-card.bg-orange {
+    display: flex;
+    flex-direction: row-reverse; /* Imagem na esquerda, texto na direita */
+    align-items: center;        /* Centraliza o bloco de texto verticalmente */
+    padding: 0 !important;
+}
+
+/* Criando uma área segura para o texto no card laranja */
+.feature-card.bg-orange .features-content {
+    flex: 1;
+    padding: 40px 30px;         /* Dá espaço nas bordas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Centraliza o texto verticalmente */
+    height: 100%;
+}
+
+/* Ajuste do Título para não bater no ícone */
+.feature-card.bg-orange h3 {
+    margin-top: 20px;           /* Desce um pouco o título */
+    max-width: 180px;           /* Força a quebra de linha antes do ícone */
+    line-height: 1.2;
+}
+
+/* Garante que a imagem ocupe metade exata sem deformar */
+.feature-card.bg-orange img {
+    width: 50% !important;
+    height: 100% !important;
+    min-height: 280px;
+    object-fit: cover !important;
+}
+
+/* Posiciona o ícone do celular no canto superior direito */
+.feature-card.bg-orange svg {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* Ícone fixo no canto superior sem atrapalhar o texto */
+.feature-card svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.feature-card h3 {
+  font-size: 22px; /* Ajuste no tamanho */
+  font-weight: bold;
+  margin-bottom: 15px;
+  max-width: 75%; /* Abre espaço para o ícone no canto */
+  line-height: 1.2;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.feature-card img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+/* =========================================
+    ELION SECTION
+    ========================================= */
+.elion-section {
+  background-color: var(--primary-blue);
+  padding: 80px 0;
+  color: var(--text-light);
+}
+
+.elion-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.elion-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elion-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+.elion-text {
+  flex: 1;
+  text-align: center;
+}
+
+.elion-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.elion-text h2 span {
+  color: var(--primary-yellow);
+}
+
+.elion-text p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* =========================================
+    COMMUNITY SECTION
+    ========================================= */
+/* --- Seção Nossa Comunidade --- */
+.community {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.community h2 {
+  color: #FF7A1B;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.community p {
+  color: #234296;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* --- Wrapper do Carrossel --- */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px; /* Espaço para os botões não ficarem em cima dos cards */
+}
+
+/* --- Botões Laterais --- */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #234296;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+  background-color: #FF7A1B;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* --- Trilho dos Cards --- */
+.testimonials {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Esconde scroll no Firefox */
+  -ms-overflow-style: none; /* Esconde scroll no IE/Edge */
+}
+
+.testimonials::-webkit-scrollbar {
+  display: none; /* Esconde scroll no Chrome/Safari */
+}
+
+/* --- Card de Depoimento --- */
+.testimonial-card {
+  background-color: #ffffff;
+  min-width: 320px; /* Largura fixa para evitar que estique */
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garante que o usuário fique no rodapé */
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+  font-style: normal;
+}
+
+/* --- Rodapé do Card (Avatar + Info) --- */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estrutura para Nome na Esquerda e Estrela na Direita */
+.user-info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info strong {
+  font-size: 16px;
+  color: #234296;
+  font-weight: 700;
+}
+
+.user-info span {
+  font-size: 13px;
+  color: #FFCE1B;
+  font-weight: bold;
+  white-space: nowrap;
+}
+/* =========================================
+    SPONSORS SECTION
+    ========================================= */
+/* --- Seção Nossos Apoiadores --- */
+.sponsors {
+  padding: 60px 0 100px;
+  text-align: center;
+  position: relative;
+}
+
+.sponsors h2 {
+  color: #4A90E2; /* Azul dos títulos conforme o Figma */
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* Container dos logos com a linha laranja ao fundo */
+.sponsors-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px; /* Espaço maior entre os logos */
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* A linha horizontal laranja */
+.sponsors-logos::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #FF7A1B; /* Laranja da marca */
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+/* Estilização dos Cards dos Logos */
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  height: 110px;
+  position: relative;
+  z-index: 2; /* Garante que o card fique ACIMA da linha laranja */
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Ajuste para o logo do PROA (fundo azul) */
+#logoProa {
+  background-color: #234296 !important;
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* =========================================
+    DOWNLOAD APP SECTION
+    ========================================= */
+.download-app {
+  background-color: var(--primary-yellow);
+  padding: 10px 0;
+  border-radius: 20px;
+  margin: 6rem auto;
+  max-width: 1100px;
+}
+
+.download-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.download-text {
+  flex: 1;
+}
+
+.download-text h2 {
+  color: var(--secondary-blue);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.download-text h3 {
+  color: var(--secondary-blue);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.download-text p {
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.store-buttons .btn-dark {
+  padding: 10px 20px;
+  width: auto;
+  min-width: 180px;
+}
+
+.store-buttons p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 16px;
+  color: var(--bg-light);
+  font-family: var(--font-main);
+  font-weight: 600;
+}
+
+.store-buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+.app-mockup {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.app-mockup img {
+  max-height: 500px;
+}
+
+
+
+/* =========================================
+    RESPONSIVIDADE (MOBILE)
+    ========================================= */
+
+@media (max-width: 900px) {
+  .features-grid,
+  .guide-text p{
+    padding: 0 50px;
+  }
+
+  .download-app{
+    padding: 50px 0;
+    margin:30px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .argus-guide,
+  .features,
+  .elion-section,
+  .community {
+    padding: 50px 0;
+  }
+
+  .guide-wrapper,
+  .elion-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .elion-text {
+    text-align: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .guide-text h2,
+  .features-header,
+  .elion-text h2,
+  .community h2 {
+    font-size: 26px;
+  }
+
+  .feature-card img {
+    display: none;
+  }
+
+  /* Carousel Ajustes Mobile */
+  .carousel-wrapper {
+    padding: 0 15px; 
+  }
+
+  .testimonials {
+    gap: 15px;
+    padding: 20px 5px;
+  }
+
+  .testimonial-card {
+    min-width: calc(100vw - 60px) !important; 
+    max-width: calc(100vw - 60px) !important;
+    padding: 20px;
+    height: auto;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-user {
+    padding-top: 10px;
+  }
+
+  .user-info strong {
+    font-size: 14px;
+  }
+
+  .carousel-btn {
+    display: none; 
+  }
+
+  /* Sponsors Ajustes Mobile */
+  .sponsors-logos {
+    flex-direction: column; 
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .sponsors-logos::before {
+    width: 2px;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sponsor-logo {
+    width: 200px;
+    height: 100px;
+    padding: 15px;
+    z-index: 2; 
+  }
+}

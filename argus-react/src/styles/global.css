@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+:root {
+  /* Cores baseadas no PDF e no global.css */
+  --primary-blue: #3b82f6; 
+  --secondary-blue: #1e3a8a; 
+  --dark-blue: #00236f;
+  --primary-orange: #f97316;
+  --primary-yellow: #facc15;
+  
+  --bg-light: #f9f9f9;
+  --text-dark: #334155;
+  --text-light: #ffffff;
+  
+  --font-main: 'Poppins', sans-serif;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 10px rgba(0,0,0,0.15);
+  --border-radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.9);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 10px 16px;
+  z-index: 200;
+  border-radius: 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* CARD COLORFULL */
+.bg-yellow { background-color: var(--primary-yellow); color: var(--secondary-blue); }
+.bg-darkblue { background-color: var(--secondary-blue); }
+.bg-orange { background-color: var(--primary-orange); }
+.bg-lightblue { background-color: var(--primary-blue); }
+.bg-blue { background-color: var(--primary-blue); }
+
+.card-blue { background-color: var(--primary-blue); }
+.card-orange { background-color: var(--primary-orange); }
+.card-values { background-color: var(--primary-orange); }
+.card-vision { background-color: var(--dark-blue); color: var(--primary-orange); }
+.card-vision p { color: white; } /* Keep paragraph white */
+
+
+/* =========================================
+    BOTÕES (Componentes)
+    ========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
+
+.btn-outline {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-orange:hover {
+  background-color: #e05900;
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+.btn-yellow {
+  background-color: var(--primary-yellow);
+  color: var(--secondary-blue);
+  box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
+}
+
+.btn-yellow:hover {
+  background-color: #eab308;
+}
+
+.btn-dark {
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.btn-dark:hover {
+  background-color: #00174f;
+}
+
+/* Multi-step indicator */
+.multi-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  justify-content: center;
+  padding: 0 12px;
+}
+.multi-step .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.multi-step .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid rgba(203,213,225,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #374151;
+}
+.multi-step .step.completed .circle {
+  background: var(--primary-blue);
+  color: #fff;
+  border-color: var(--primary-blue);
+}
+.multi-step .connector {
+  flex: 1 1 40px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-blue) 0%, rgba(30,58,138,0.15) 100%);
+  border-radius: 3px;
+}
+
+ /* HEADER & NAVEGAÇÃO */
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary-blue);
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px; 
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+/* Barrinha */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 3px;
+
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* Animação da barrinha */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Página ativa */
+.nav-links a.active {
+  color: var(--primary-blue);
+}
+
+/* Mantém barrinha ativa */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-profile {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.logo-area-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary-white);
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 60px; 
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons div {
+    width: 20px; height: 20px;
+}
+
+.footer-brand h3 { color: white; margin-bottom: 10px;}
+.footer-brand p { font-size: 0.85rem; color: #ccc; margin-bottom: 20px; }
+.footer-brand-logo { width: 50px; height: 50px; margin-bottom: 10px; border-radius: 8px;}
+
+.footer-links h4 { color: var(--primary-yellow); margin-bottom: 15px; }
+.footer-links ul li { margin-bottom: 8px; font-size: 0.9rem; color: #ccc; cursor: pointer; }
+.footer-links ul li:hover { color: white; }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================================
+    COMPONENTES GLOBAIS (Compartilhados)
+    ========================================= */
+/* --- ADICIONADO: Seção Download App foi unificada aqui pois é usada na Home e no Suporte --- */
+.download-app {
+  background-color: var(--primary-yellow);
+  padding: 10px 0;
+  border-radius: 20px;
+  margin: 6rem auto;
+  max-width: 1100px;
+}
+
+.download-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.download-text {
+  flex: 1;
+}
+
+.download-text h2 {
+  color: var(--secondary-blue);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.download-text h3 {
+  color: var(--secondary-blue);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.download-text p {
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.store-buttons .btn-dark {
+  padding: 10px 20px;
+  width: auto;
+  min-width: 180px;
+}
+
+.store-buttons p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 16px;
+  color: var(--bg-light);
+  font-family: var(--font-main);
+  font-weight: 600;
+}
+
+.store-buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+.app-mockup {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.app-mockup img {
+  max-height: 500px;
+}
+
+
+/* =========================================
+    RESPONSIVIDADE GLOBAL (Header, Footer, Utils)
+    ========================================= */
+/* --- ADICIONADO: Tudo que for navegação geral e estrutura macro, resolvemos aqui --- */
+@media (max-width: 900px) {
+  /* Menu Navigation */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    border-radius: 0 0 12px 12px;
+    z-index: 99;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Oculta o perfil/cadastro tradicional, exibe o mobile-only-btn pelo menu */
+  .user-actions {
+    display: none;
+  }
+  .mobile-only-btn { 
+    display: block !important; 
+    width: 100%; 
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Download App (Componente Global) */
+  .download-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .download-text { padding: 1rem 0; }
+  .store-buttons { justify-content: center; }
+  .app-mockup { display: none; } /* Remove mockup em telas menores para destacar botões */
+}
+
+@media (max-width: 600px) {
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-brand > img {
+    margin: 0 auto 15px;
+  }
+  .footer-brand p {
+    margin: 0 auto 20px;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Download App (Componente Global) */
+  .download-app {
+    padding: 40px 0;
+  }
+  .download-wrapper {
+    padding: 0 20px;
+  }
+  .download-text h2 {
+    font-size: 26px;
+  }
+  .store-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .store-buttons .btn-dark {
+    width: 100%;
+  }
+
+  .team-info h3 { font-size: 1.1rem; }
+        .team-info p { font-size: 0.8rem; }
+        .footer-brand p { font-size: 0.8rem; }
+}
+
+@media (max-width: 768px) {
+/* AJUSTE: Redução de texto no mobile para telas até 768px */
+.hero-section h1 { font-size: 1.8rem; }
+.hero-description { font-size: 0.95rem; }
+
+.team-title { font-size: 2rem; }
+
+.info-card h3 { font-size: 1.3rem; }
+.info-card p { font-size: 0.9rem; }
+}
+
+/* =========================================
+   EFEITOS DE INTERAÇÃO
+========================================= */
+
+.card-hover {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-hover:active {
+  transform: translateY(-6px);
+}
