@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/Suport.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="shortcut icon" href="../public/logo.png" type="image/x-icon">
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js" integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.css" integrity="sha512-UiKdzM5DL+I+2YFxK+7TDedVyVm7HMp/bN85NeWMJNYortoll+Nd6PU9ZDrZiaOsdarOyk9egQm6LOJZi36L2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -64,6 +66,9 @@
                 <div class="hero-bg">
                     <img src="../public/pageSuport/Group-77@2x.png" alt="Mulher usando aplicativo Argus">
                 </div>
+
+                <!-- <div class="hero-overlay"></div> -->
+
                 <div class="hero-content">
                     <h1>Suporte ARGUS</h1>
                     <p>Bem-vindo à Central de Suporte ARGUS. Escolha uma das opções abaixo para aprender, atualizar ou pedir ajuda.</p>
@@ -73,52 +78,81 @@
         </section>
 
         <!-- GUIA DE USO -->
-        <section class="section container">
-            <h2 class="section-title">Guia de Uso</h2>
-            <div class="guia-grid">
-                
-                <div class="guia-card orange">
-                    <div class="guia-img">
-                        <img src="../public/pageSuport/conexao_coleira_argus.png" alt="Conectando à guia do cão" onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ce8cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="guia-text">
-                        <h3>1. Conecte o ARGUS à guia do cão.</h3>
-                    </div>
-                </div>
+      <section class="section container">
+  <h2 class="section-title">Guia de Uso</h2>
+  <div class="carrossel-wrapper">
+    <div class="guia-grid" id="guiaCarrossel">
+      <div class="guia-card bg-orange card-hover">
+        <div class="guia-img">
+          <img src="../public/pageSuport/conexao_coleira_argus.png" alt="Conectando à guia do cão">
+        </div>
+        <div class="guia-text">
+          <h3>1. Conecte o ARGUS à guia do cão.</h3>
+        </div>
+      </div>
 
-                <div class="guia-card darkblue">
-                    <div class="guia-img">
-                        <img src="../public/pageSuport/tela_de_conexao.png" alt="Pareamento com aplicativo" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="guia-text">
-                        <h3>2. Ligue o dispositivo e aguarde o pareamento com o aplicativo.</h3>
-                    </div>
-                </div>
+      <div class="guia-card bg-darkblue card-hover">
+        <div class="guia-img">
+          <img src="../public/pageSuport/tela_de_conexao.png" alt="Pareamento com aplicativo">
+        </div>
+        <div class="guia-text">
+          <h3>2. Ligue o dispositivo e aguarde o pareamento com o aplicativo.</h3>
+        </div>
+      </div>
 
-            </div>
-        </section>
+      <div class="guia-card bg-yellow card-hover">
+        <div class="guia-img">
+          <img src="../public/pageSuport/tela_de_navegacao.png" alt="Abrindo o modo navegação do App">
+        </div>
+        <div class="guia-text">
+          <h3>3. Abra o app ARGUS e escolha o modo de navegação.</h3>
+        </div>
+      </div>
+
+      <div class="guia-card bg-lightblue card-hover">
+        <div class="guia-img">
+          <img src="../public/pageSuport/tela_de_acessibilidade.png" alt="Ajuste de acessibilidade">
+        </div>
+        <div class="guia-text">
+          <h3>4. Ajuste configurações conforme sua preferência diretamente pelo app.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="carrossel-indicadores">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+  </div>
+</section>
+
+
 
         <!-- FAQ -->
         <section class="section container">
-          <h2 class="section-title blue">Perguntas Frequentes (FAQ)</h2>
-          <div class="faq-list">
-              
-              <div class="faq-item">
-                  <h4>Preciso de internet para usar?</h4>
-                  <p>Não durante o uso. Apenas para atualizações e configurações via app.</p>
-              </div>
+  <h2 class="section-title blue">Perguntas Frequentes (FAQ)</h2>
+  <div class="faq-list">
+    
+    <details class="faq-item">
+      <summary>Preciso de internet para usar?</summary>
+      <p>Não durante o uso. Apenas para atualizações e configurações via app.</p>
+    </details>
 
-              <div class="faq-item">
-                  <h4>Funciona com qualquer cão-guia?</h4>
-                  <p>Sim, o design é compatível com guias padrão.</p>
-              </div>
+    <details class="faq-item">
+      <summary>Funciona com qualquer cão-guia?</summary>
+      <p>Sim, o design é compatível com guias padrão.</p>
+    </details>
 
-              <div class="faq-item">
-                  <h4>O dispositivo é resistente à chuva?</h4>
-                  <p>Sim, é resistente à água e ao uso urbano diário.</p>
-              </div>
-          </div>
-        </section>
+    <details class="faq-item">
+      <summary>O dispositivo é resistente à chuva?</summary>
+      <p>Sim, é resistente à água e ao uso urbano diário.</p>
+    </details>
+
+  </div>
+</section>
+
 
         <!-- DOWNLOAD APP -->
         <section class="download-app">
@@ -219,21 +253,12 @@
           </a>
           <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
           <div class="social-icons">
-            <div class="social-icon">
-              <a href="https://www.instagram.com/argus.vision.guia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="../public/icons/Vector7.svg" alt="Instagram">
-              </a>
-            </div>
-            <div class="social-icon">
-              <a href="https://github.com/ArgusVision-demoday" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <img src="../public/icons/Vector8.svg" alt="GitHub">
-              </a>
-            </div>
-            <div class="social-icon">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <img src="../public/icons/Vector9.svg" alt="Facebook">
-              </a>
-            </div>
+            <div class="social-icon"><a href="https://www.instagram.com/argus.vision/" target="_blank"><img
+                  src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
+            <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img
+                  src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
+            <div class="social-icon"><a href="https://www.linkedin.com/in/argus-vision-54529a412/?isSelfProfile=false" target="_blank"><img
+                  src="../public/icons/Vector9.svg" alt="Linkedin"></a></div>
           </div>
         </div>
 
@@ -265,12 +290,10 @@
       </div>
 
       <div class="footer-bottom">
-        &copy; 2026 ARGUS VISION — Todos os Direitos Reservados | Termos e Condições | Política de Privacidade
+        &copy; 2026 ARGUS VISION — Todos os Direitos Reservados
       </div>
     </div>
   </footer>
-<<<<<<< Updated upstream
-=======
 
   <div class="chatbot-container">
 
@@ -355,9 +378,6 @@ dots.forEach(dot => {
   });
 });
 
-</script>
-
->>>>>>> Stashed changes
     <!-- JAVASCRIPT BÁSICO PARA MENU -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -416,5 +436,7 @@ dots.forEach(dot => {
             }) 
         });
     </script>
+
+    <script src="../js/chatbot.js"></script>
 </body>
 </html>

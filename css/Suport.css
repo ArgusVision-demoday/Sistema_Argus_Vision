@@ -1,56 +1,82 @@
+main {
+  padding: 0 20px; /* margem lateral geral da página */
+}
+
+
 /* =========================================
            TIPOGRAFIA E TÍTULOS
            ========================================= */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-orange);
-            margin: 3rem 0 3rem;
-        }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin: 3rem 0 3rem;
+}
 
-        .section-title.blue { color: var(--secondary-blue); }
-        .section-title.dark { color: var(--dark-blue); }
+.section-title.blue {
+    color: var(--secondary-blue);
+}
+
+.section-title.dark {
+    color: var(--dark-blue);
+}
 
 /* =========================================
     SEÇÕES
     ========================================= */
 .section {
-    padding: rem 0;
+    padding: 4rem 0;
 }
 
- .hero-support {
+.hero-support {
     padding: 3rem 0;
 }
 
 .hero-card {
-    position: relative; /* Fundamental para segurar a imagem absoluta */
+    position: relative;
+    /* Fundamental para segurar a imagem absoluta */
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     min-height: 716px;
     display: flex;
     align-items: center;
     margin-top: 3rem;
-   }
+}
 
 /* Imagem de Fundo Absolute */
 .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background: linear-gradient(90deg,
+            rgba(0, 32, 96, 0.85) 0%,
+            rgba(0, 32, 96, 0.65) 45%,
+            rgba(0, 32, 96, 0.15) 100%);
 }
 
 /* Conteúdo do Hero (Textos) */
 .hero-content {
     position: relative;
-    z-index: 2; /* Fica acima da máscara e da imagem */
+    z-index: 3;
+    /* Fica acima da máscara e da imagem */
     padding: 4rem;
     color: var(--text-light);
-    max-width: 55%; /* Limita a largura do texto para não cobrir o rosto da moça */
+    max-width: 55%;
+    /* Limita a largura do texto para não cobrir o rosto da moça */
 }
 
 .hero-content h1 {
@@ -64,6 +90,7 @@
     opacity: 0.95;
     line-height: 1.5;
 }
+
 /* DECORATIVE DOTS */
 .hero-dots {
     position: absolute;
@@ -75,49 +102,86 @@
     background-image: radial-gradient(var(--primary-blue) 2px, transparent 2px);
     background-size: 15px 15px;
 }
-
 /* GUIA DE USO */
+.card-hover:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+
+.carrossel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .guia-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  display: flex;
+  gap: 20px; /* espaço entre cards */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.guia-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .guia-card {
-    display: flex;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    color: var(--text-light);
-    box-shadow: var(--shadow-md);
-    height: 250px;
+  flex: 0 0 50%; /* desktop: metade da largura */
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--text-light);
+  display: flex;
 }
 
-.guia-card.orange { background-color: var(--primary-orange); }
-.guia-card.darkblue { background-color: var(--secondary-blue); }
 
 .guia-img {
-    width: 45%;
-    background-color: var(--bg-white);
+  width: 50%; /* metade do card */
+  background-color: var(--bg-white);
 }
 
 .guia-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* mantém proporção */
+  margin: 5px; /* espaço interno */
+  border-radius: 10px;
 }
+
+
+
 
 .guia-text {
-    width: 55%;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
+  width: 45%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
 
-.guia-text h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.4;
+/* setas laterais no desktop */
+/* setas fora do card, quadradas arredondadas */
+.carrossel-indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 8px;
 }
+
+.carrossel-indicadores .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrossel-indicadores .dot.active {
+  background-color: var(--secondary-blue);
+}
+
+
 
 /* FAQ */
 .faq-section {
@@ -150,6 +214,25 @@
     color: var(--text-muted);
     font-size: 0.95rem;
 }
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #f9f9f9;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--secondary-blue);
+}
+
+details[open] {
+  background: #eef6ff; /* muda cor quando aberto */
+}
+
 
 /* DOWNLOAD APP */
 .app-section .container {
@@ -215,7 +298,7 @@
     ========================================= */
 .download-app {
   background-color: var(--primary-yellow);
-  padding: 10px 0;
+  padding: 20px 0;
   border-radius: 20px;
   margin: 6rem auto;
   max-width: 1100px;
@@ -233,6 +316,7 @@
 
 .download-text {
   flex: 1;
+  padding-left: 20px;
 }
 
 .download-text h2 {
@@ -283,7 +367,7 @@
 
 .app-mockup {
   width: 100%;
-  max-width: 280px;
+  max-width: 700px; /* aumente o limite do container */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,9 +375,10 @@
 }
 
 .app-mockup img {
-  max-height: 500px;
+  max-width: none; /* remove limite */
+  width: 120%;     /* cresce além do container */
+  padding-left: 20px;
 }
-
 
 /* CONTATO */
 .contact-grid {
@@ -398,26 +483,108 @@ textarea.form-control {
     margin-top: 1rem;
     border-radius: 8px;
 }
-  /* =========================================
+
+  .carrossel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  .guia-card {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    text-align: center;
+  }
+  button {
+    margin: 10px;
+    cursor: pointer;
+  }
+
+/* =========================================
     RESPONSIVIDADE
     ========================================= */
+
+@media (max-width: 1024px) {
+  .guia-card {
+    flex: 0 0 70%; /* tablets: ocupa 70% */
+  }
+
+}
+
 @media (max-width: 992px) {
-    .contact-grid { grid-template-columns: 1fr; }
-    .hero-content { max-width: 80%; padding: 3rem 2rem; }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        max-width: 80%;
+        padding: 3rem 2rem;
+    }
+
     /* Apenas de segurança caso o overlay tenha sido injetado via JS em algum momento */
-    .hero-overlay { background: linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.8) 70%, rgba(255,255,255,0) 100%); }
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.8) 70%, rgba(255, 255, 255, 0) 100%);
+    }
 }
 
 @media (max-width: 768px) {
-  .hero-card { min-height: 450px; margin-top: 1rem; }
-  .hero-content { max-width: 100%; text-align: center; padding: 2rem 1.5rem; }
-  .hero-overlay { background: linear-gradient(180deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.6) 100%); }
-  .hero-content h1 { font-size: 2.2rem; }
-  
-  .guia-grid { grid-template-columns: 1fr; }
-  .guia-card { flex-direction: column; height: auto; }
-  .guia-img { width: 100%; height: 200px; }
-  .guia-text { width: 100%; text-align: center; justify-content: center; padding: 1.5rem;}
-  
-  .contact-form { padding: 2rem 1.5rem; margin-bottom: 2rem; }
+
+    .hero-card {
+        min-height: 420px;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg,
+                rgba(0, 32, 96, 0.9) 0%,
+                rgba(0, 32, 96, 0.7) 100%);
+    }
+
+    .hero-support {
+        margin-top: 1rem;
+    }
+
+    .guia-card {
+    flex: 0 0 auto;        /* não força largura fixa */
+    margin: 0 auto;        /* centraliza o card */
+    max-width: 350px;      /* limite menor */
+    width: 100%;           /* ocupa toda a largura até o limite */
+  }
+
+  .guia-img {
+    width: 100%; /* imagem ocupa toda a largura */
+  }
+
+  .guia-text {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.8rem; /* menor no celular (≈13px) */
+    line-height: 1.4;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 568px) {
+  .guia-text {
+    font-size: 0.5 rem; /* ainda menor (≈11px) */
+  }
 }

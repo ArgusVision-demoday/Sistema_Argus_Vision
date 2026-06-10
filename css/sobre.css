@@ -431,7 +431,9 @@ width: 100%;
 
       .ods-text h4 { color: var(--primary-yellow); font-size: 1.2rem; margin-bottom: 8px; font-weight: 700; }
       .ods-text p { color: #ffffff; font-size: 1rem; }
-      
+      .ods10 {
+        padding: 50px;
+      }
 /* =========================================
     TEAM SECTION
     ========================================= */

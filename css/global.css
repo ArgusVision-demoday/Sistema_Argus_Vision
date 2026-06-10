@@ -298,12 +298,11 @@ footer {
 }
 
 /* =========================================
-    COMPONENTES GLOBAIS (Compartilhados)
+    DOWNLOAD APP SECTION
     ========================================= */
-/* --- ADICIONADO: Seção Download App foi unificada aqui pois é usada na Home e no Suporte --- */
 .download-app {
   background-color: var(--primary-yellow);
-  padding: 10px 0;
+  padding: 20px 0;
   border-radius: 20px;
   margin: 6rem auto;
   max-width: 1100px;
@@ -321,6 +320,7 @@ footer {
 
 .download-text {
   flex: 1;
+  padding-left: 20px;
 }
 
 .download-text h2 {
@@ -371,7 +371,7 @@ footer {
 
 .app-mockup {
   width: 100%;
-  max-width: 280px;
+  max-width: 700px; /* aumente o limite do container */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,9 +379,10 @@ footer {
 }
 
 .app-mockup img {
-  max-height: 500px;
+  max-width: none; /* remove limite */
+  width: 120%;     /* cresce além do container */
+  padding-left: 20px;
 }
-
 
 /* =========================================
     RESPONSIVIDADE GLOBAL (Header, Footer, Utils)
@@ -492,4 +493,25 @@ footer {
 
 .info-card h3 { font-size: 1.3rem; }
 .info-card p { font-size: 0.9rem; }
+}
+
+/* =========================================
+   EFEITOS DE INTERAÇÃO
+========================================= */
+
+.card-hover {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-hover:active {
+  transform: translateY(-6px);
 }

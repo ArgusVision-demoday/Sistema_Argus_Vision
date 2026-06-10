@@ -5,8 +5,10 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="../css/sobre.css" />
     <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="shortcut icon" href="../public/logo.png" type="image/x-icon">
 
-    <title>Argus Vision</title>
+    <title>Sobre - Argus Vision</title>
   </head>
   <body>
     <header class="header">
@@ -61,19 +63,19 @@
 
         <!-- MISSÃO, VALORES, VISÃO -->
         <section class="info-cards-container">
-            <div class="info-card card-mission">
+            <div class="info-card card-mission card-hover">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionMissao.png"/></div>
                 <h3 class="missao">Missão</h3>
                 <p>Promover mais autonomia, segurança e inclusão social de pessoas com deficiência visual, ao passearem com seus cães-guia.</p>
             </div>
 
-            <div class="info-card card-values">
+            <div class="info-card card-values card-hover">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionVisao.png"/></div>
                 <h3 class="visao">Visão</h3>
                 <p>Ser pioneiros nacionais no desenvolvimento de tecnologias assistivas integradas para cães-guia.</p>
             </div>
 
-            <div class="info-card card-vision">
+            <div class="info-card card-vision card-hover">
                 <div class="icon-placeholder"><img src="../public/pageAbout/elionValores.png"/></div>
                 <h3 class="valores">Valores</h3>
                 <p>Empatia com o usuário, foco total em acessibilidade, inovação contínua e profundo respeito e cuidado com o bem-estar animal.</p>
@@ -95,10 +97,10 @@
                     <div class="carousel-item active" data-bs-interval="10000">
                     <img src="../public/pageAbout/card1.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2000">
+                    <div class="carousel-item" data-bs-interval="10000">
                     <img src="../public/pageAbout/card2.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="10000">
                     <img src="../public/pageAbout/card3.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
@@ -111,7 +113,7 @@
                 <p>Transformamos necessidades reais em soluções inteligentes. Com sensores e design pensado para cães-guia, criamos um sistema que promove autonomia e segurança para pessoas com deficiência visual.</p>
             </div> -->
 
-            <div class="horizon-box">
+            <div class="horizon-box card-hover">
                 <h2>Rumo a novos <br> horizontes</h2>
                 <p>Nosso objetivo é expandir a ARGUS, levando nossa tecnologia inclusiva para diferentes regiões e transformando vidas além das fronteiras locais.</p>
             </div>
@@ -275,10 +277,13 @@
                   </a>
                     <p>Tecnologia Assistiva para tutores de Cães-Guia: Trazendo mais autonomia ao passear com seu cão</p>
                     <div class="social-icons">
-                        <div class="social-icon"><a href="https://www.instagram.com/argus.vision.guia/" target="_blank"><img src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
-                        <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
-                        <div class="social-icon"><a href="https://www.facebook.com/" target="_blank"><img src="../public/icons/Vector9.svg" alt="Facebook"></a></div>
-                    </div>
+            <div class="social-icon"><a href="https://www.instagram.com/argus.vision/" target="_blank"><img
+                  src="../public/icons/Vector7.svg" alt="Instagram"></a></div>
+            <div class="social-icon"><a href="https://github.com/ArgusVision-demoday" target="_blank"><img
+                  src="../public/icons/Vector8.svg" alt="GitHub"></a></div>
+            <div class="social-icon"><a href="https://www.linkedin.com/in/argus-vision-54529a412/?isSelfProfile=false" target="_blank"><img
+                  src="../public/icons/Vector9.svg" alt="Linkedin"></a></div>
+          </div>
                 </div>
 
                 <div class="footer-links">
@@ -308,10 +313,74 @@
             </div>
 
             <div class="footer-bottom">
-                &copy; 2026 ARGUS VISION - Todos os Direitos Reservados | Termos e Condições | Política de Privacidade
+                &copy; 2026 ARGUS VISION - Todos os Direitos Reservados
             </div>
         </div>
     </footer>
+
+    <div class="chatbot-container">
+
+    <button id="chatToggle" class="chatbot-button" aria-label="Abrir assistente virtual Elion">
+      <img src="../public/chatbot/elion-avatar.png" alt="Elion">
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+
+      <div class="chat-header">
+        <span>Converse com o Elion</span>
+        <button id="closeChat">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="message-row">
+
+          <img src="../public/chatbot/elion-avatar.png" class="message-avatar" alt="Elion">
+
+          <div class="bot-message">
+            Olá, tudo bem?<br>
+            Sou o Elion, seu cão-guia digital.<br>
+            Como posso ajudar você?
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="chat-input">
+
+        <input id="chatInput" type="text" placeholder="Digite sua dúvida..." aria-label="Digite sua dúvida">
+
+        <button id="sendButton">
+          Enviar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.SiennaAccessibility) {
+      new window.SiennaAccessibility.Widget();
+    }
+  });
+</script>
+
 
 <!-- LINK DO BOOTSTRAP CORRIGIDO (JAVASCRIPT) -->
     <script>
@@ -437,6 +506,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   </script>
 
-
+  <script src="../js/chatbot.js"></script> 
 </body>
 </html>
