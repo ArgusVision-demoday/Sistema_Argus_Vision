@@ -12,11 +12,11 @@ const API_URL =
 
 const btnElion = document.getElementById("btnElion");
 
-// Abrir chatbot pelo botão "Falar com Elion"
-btnElion.addEventListener("click", () => {
-    chatWindow.classList.toggle("active");
-});
-
+if (btnElion) {
+    btnElion.addEventListener("click", () => {
+        chatWindow.classList.toggle("active");
+    });
+}
 
 // Abrir e fechar chatbot pelo mascote
 chatToggle.addEventListener("click", () => {
