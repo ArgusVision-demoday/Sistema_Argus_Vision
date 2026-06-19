@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/EmDesenvolvimento.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
     <title>Em Desenvolvimento - Argus Vision</title>
 </head>
 <body>
@@ -122,6 +123,49 @@
     </div>
   </footer>
 
+  <div class="chatbot-container">
+
+    <button id="chatToggle" class="chatbot-button" aria-label="Abrir assistente virtual Elion">
+      <img src="../public/chatbot/elion-avatar.png" alt="Elion">
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+
+      <div class="chat-header">
+        <span>Converse com o Elion</span>
+        <button id="closeChat">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="message-row">
+
+          <img src="../public/chatbot/elion-avatar.png" class="message-avatar" alt="Elion">
+
+          <div class="bot-message">
+            Olá, tudo bem?<br>
+            Sou o Elion, seu cão-guia digital.<br>
+            Como posso ajudar você?
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="chat-input">
+
+        <input id="chatInput" type="text" placeholder="Digite sua dúvida..." aria-label="Digite sua dúvida">
+
+        <button id="sendButton">
+          Enviar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <div vw class="enabled">
   <div vw-access-button class="active"></div>
   <div vw-plugin-wrapper>
@@ -143,6 +187,7 @@
   });
 </script>
 
+<script src="../js/chatbot.js"></script>
 
     <script>
     // Configuração do Menu Mobile

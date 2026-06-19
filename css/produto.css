@@ -130,7 +130,7 @@
 
 .hero__figure img {
   width: 100%;
-  max-width: 480px;
+  max-width: 900px;
   border-radius: 16px;
   object-fit: contain;
 }
@@ -543,6 +543,7 @@
 .cta-image img {
   max-width: 512px;
   border-radius: var(--border-radius);
+  transform: rotate(10deg);
 }
 
 
