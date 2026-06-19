@@ -685,6 +685,11 @@
   .tecnologia__content h2 {
     font-size: 1.75rem;
   }
+
+  .cta-content {
+    order: 2;
+  }
+
 }
 
 /* --- Mobile pequeno (≤ 480px) --- */
